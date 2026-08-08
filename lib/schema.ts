@@ -174,14 +174,63 @@ export function websiteSchema() {
 }
 
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  const last = items[items.length - 1]?.path ?? "/";
   return {
     "@type": "BreadcrumbList",
+    "@id": `${site.url}${last === "/" ? "/" : last}#breadcrumb`,
     itemListElement: items.map((item, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
       item: `${site.url}${item.path}`,
     })),
+  };
+}
+
+// Reusable WebPage-family node generator. Ties each page into the entity graph:
+// it is part of the WebSite, is "about" a core entity (the Physician by
+// default; the Person on the About page), and links to its BreadcrumbList and
+// primary image by @id. Use AboutPage / ContactPage / CollectionPage /
+// MedicalWebPage via `type`.
+export function webPageSchema(opts: {
+  type?:
+    | "WebPage"
+    | "AboutPage"
+    | "ContactPage"
+    | "CollectionPage"
+    | "MedicalWebPage";
+  path: string;
+  name: string;
+  description: string;
+  primaryImage?: string;
+  aboutId?: string;
+  mainEntityId?: string;
+  hasBreadcrumb?: boolean;
+  lastReviewed?: string;
+}) {
+  const url = `${site.url}${opts.path === "/" ? "/" : opts.path}`;
+  return {
+    "@type": opts.type ?? "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: opts.name,
+    description: opts.description,
+    inLanguage: "en-AU",
+    isPartOf: { "@id": IDS.website },
+    about: { "@id": opts.aboutId ?? IDS.physician },
+    ...(opts.mainEntityId ? { mainEntity: { "@id": opts.mainEntityId } } : {}),
+    ...(opts.primaryImage
+      ? {
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: opts.primaryImage,
+          },
+        }
+      : {}),
+    ...(opts.hasBreadcrumb
+      ? { breadcrumb: { "@id": `${url}#breadcrumb` } }
+      : {}),
+    ...(opts.lastReviewed ? { lastReviewed: opts.lastReviewed } : {}),
   };
 }
 

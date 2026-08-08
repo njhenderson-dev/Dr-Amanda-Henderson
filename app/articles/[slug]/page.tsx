@@ -110,6 +110,7 @@ export default async function ArticlePage({
               <Link href="/about" className="font-medium text-sage-700 hover:underline">
                 Dr Amanda Henderson
               </Link>
+              , FRACGP
             </span>
             <span aria-hidden="true">·</span>
             <span>{article.readingMinutes} min read</span>

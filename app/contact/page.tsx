@@ -3,13 +3,26 @@ import Link from "next/link";
 import { BookButton } from "@/components/BookButton";
 import { Breadcrumbs } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  jsonLdGraph,
+  webPageSchema,
+  IDS,
+} from "@/lib/schema";
 import { practice, fullAddress, site } from "@/lib/site";
+
+const description = `Contact Dr Amanda Henderson at ${practice.name}, ${fullAddress}. Book online via HotDoc or call ${practice.phone}. After-hours and emergency information.`;
 
 export const metadata: Metadata = {
   title: "Contact & Location | Dr Amanda Henderson, GP Maroubra",
-  description: `Contact Dr Amanda Henderson at ${practice.name}, ${fullAddress}. Book online via HotDoc or call ${practice.phone}. After-hours and emergency information.`,
+  description,
   alternates: { canonical: "/contact" },
+  openGraph: {
+    type: "website",
+    title: "Contact & Location | Dr Amanda Henderson, GP Maroubra",
+    description,
+    url: `${site.url}/contact`,
+  },
 };
 
 const crumbs = [
@@ -20,7 +33,20 @@ const crumbs = [
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={jsonLdGraph(breadcrumbSchema(crumbs))} />
+      <JsonLd
+        data={jsonLdGraph(
+          breadcrumbSchema(crumbs),
+          webPageSchema({
+            type: "ContactPage",
+            path: "/contact",
+            name: "Contact & Location — Dr Amanda Henderson",
+            description,
+            aboutId: IDS.clinic,
+            mainEntityId: IDS.clinic,
+            hasBreadcrumb: true,
+          }),
+        )}
+      />
 
       <section className="container-page pt-10">
         <Breadcrumbs items={crumbs} />

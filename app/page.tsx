@@ -4,22 +4,31 @@ import { BookButton } from "@/components/BookButton";
 import { Portrait } from "@/components/Portrait";
 import { BookingCta } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
+import { breadcrumbSchema, jsonLdGraph, webPageSchema } from "@/lib/schema";
 import {
   serviceAreas,
   expectations,
   credentials,
   practice,
   fullAddress,
+  site,
 } from "@/lib/site";
 import { getAllArticles } from "@/lib/articles";
+
+const description =
+  "Dr Amanda Henderson is a female family GP in Maroubra, Sydney. Thoughtful, thorough care with a particular interest in women's health, pregnancy, children and family medicine. Book online.";
 
 export const metadata: Metadata = {
   // Homepage keeps the established, well-ranking title.
   title: "Dr Amanda Henderson | Family GP, Maroubra Sydney",
-  description:
-    "Dr Amanda Henderson is a female family GP in Maroubra, Sydney. Thoughtful, thorough care with a particular interest in women's health, pregnancy, children and family medicine. Book online.",
+  description,
   alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    title: "Dr Amanda Henderson | Female Family GP, Maroubra Sydney",
+    description,
+    url: site.url,
+  },
 };
 
 export default function HomePage() {
@@ -30,6 +39,14 @@ export default function HomePage() {
       <JsonLd
         data={jsonLdGraph(
           breadcrumbSchema([{ name: "Home", path: "/" }]),
+          webPageSchema({
+            type: "WebPage",
+            path: "/",
+            name: "Dr Amanda Henderson | Female Family GP, Maroubra",
+            description,
+            primaryImage: `${site.url}/images/dr-amanda-henderson-960.webp`,
+            hasBreadcrumb: true,
+          }),
         )}
       />
 
