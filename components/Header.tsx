@@ -27,13 +27,13 @@ export function Header() {
         {/* Desktop nav */}
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-6 lg:flex"
+          className="hidden items-center gap-x-5 lg:flex xl:gap-x-6"
         >
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[0.95rem] font-medium text-muted transition-colors hover:text-ink"
+              className="whitespace-nowrap text-[0.9rem] font-medium text-muted transition-colors hover:text-ink xl:text-[0.95rem]"
             >
               {item.label}
             </Link>
@@ -43,7 +43,7 @@ export function Header() {
             target="_blank"
             rel="noopener"
             data-cta="book_appointment"
-            className="btn-primary px-5 py-2 text-[0.95rem]"
+            className="btn-primary px-5 py-2 text-[0.9rem] xl:text-[0.95rem]"
           >
             Book
           </a>

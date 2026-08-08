@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BookButton } from "@/components/BookButton";
 import { Breadcrumbs } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
@@ -63,7 +64,12 @@ export default function ContactPage() {
           <div className="rounded-2xl border border-line bg-white/60 p-8 shadow-soft">
             <h2 className="font-serif text-xl font-semibold">Appointments</h2>
             <p className="mt-4 leading-7 text-muted">
-              Book online any time, or call during practice hours.
+              Book online any time, or call during practice hours. This is a
+              private billing practice &mdash; see{" "}
+              <Link href="/fees" className="font-medium text-sage-700 hover:underline">
+                fees
+              </Link>{" "}
+              for consultation costs and Medicare rebates.
             </p>
             <p className="mt-4 text-lg">
               <a

@@ -132,14 +132,13 @@ export default function HomePage() {
       <section className="bg-canvas">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-2xl">
-            <p className="eyebrow">My approach</p>
+            <p className="eyebrow">Your visit</p>
             <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
               What you can expect
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted">
-              You&rsquo;ll be listened to properly, your concerns will be taken
-              seriously, and your care will be considered in the context of you
-              as a whole person.
+              The practical side of a visit matters as much as the medicine.
+              Here&rsquo;s what an appointment with me actually involves.
             </p>
           </div>
           <dl className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
