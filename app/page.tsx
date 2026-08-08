@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { BookButton } from "@/components/BookButton";
 import { Portrait } from "@/components/Portrait";
 import { BookingWidget } from "@/components/BookingWidget";
+import { AppointmentModule } from "@/components/AppointmentPromo";
 import { BookingCta } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, jsonLdGraph, webPageSchema } from "@/lib/schema";
@@ -107,6 +108,9 @@ export default function HomePage() {
           </ul>
         </div>
       </section>
+
+      {/* 2b — "WHICH APPOINTMENT?" MODULE (beneath the hero) */}
+      <AppointmentModule />
 
       {/* 3 — HOW AMANDA CAN HELP */}
       <section className="container-page py-16 md:py-20">

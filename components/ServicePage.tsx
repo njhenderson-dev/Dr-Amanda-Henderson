@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BookButton } from "./BookButton";
+import { AppointmentPromo } from "./AppointmentPromo";
 import { Breadcrumbs, BookingCta, FaqList } from "./ui";
 import { JsonLd } from "./JsonLd";
 import {
@@ -180,6 +181,11 @@ export function ServicePage({ slug }: { slug: string }) {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Appointment helper promo */}
+      <section className="container-page pt-12">
+        <AppointmentPromo />
       </section>
 
       {/* FAQs */}

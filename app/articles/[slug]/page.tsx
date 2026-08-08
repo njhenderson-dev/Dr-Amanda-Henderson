@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, BookingCta } from "@/components/ui";
+import { AppointmentPromoInline } from "@/components/AppointmentPromo";
 import { JsonLd } from "@/components/JsonLd";
 import {
   articleSchema,
@@ -169,6 +170,10 @@ export default async function ArticlePage({
             </Link>{" "}
             for how this content is written and reviewed.
           </p>
+        </div>
+
+        <div className="mt-6">
+          <AppointmentPromoInline />
         </div>
       </article>
 
