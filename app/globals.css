@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-ink;
+    text-wrap: balance;
+  }
+
+  /* Visible, accessible focus states everywhere. */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-none ring-2 ring-sage-600 ring-offset-2 ring-offset-paper rounded-sm;
+  }
+
+  ::selection {
+    background: theme("colors.sage.100");
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .container-prose {
+    @apply mx-auto w-full max-w-3xl px-5 sm:px-6;
+  }
+
+  /* Primary booking button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-600 px-6 py-3 text-base font-medium text-white shadow-soft transition-colors hover:bg-sage-700 focus-visible:ring-offset-paper;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-sage-600/40 bg-transparent px-6 py-3 text-base font-medium text-sage-700 transition-colors hover:bg-sage-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 text-base font-medium text-sage-700 underline-offset-4 hover:underline;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.12em] text-sage-600;
+  }
+
+  /* Long-form article / rich text styling */
+  .prose-doc {
+    @apply text-[1.075rem] leading-8 text-ink/90;
+  }
+  .prose-doc > * + * {
+    @apply mt-5;
+  }
+  .prose-doc h2 {
+    @apply mt-12 text-2xl font-semibold text-ink;
+  }
+  .prose-doc h3 {
+    @apply mt-9 text-xl font-semibold text-ink;
+  }
+  .prose-doc p {
+    @apply max-w-prose;
+  }
+  .prose-doc ul {
+    @apply list-disc space-y-2 pl-6 marker:text-sage-400;
+  }
+  .prose-doc ol {
+    @apply list-decimal space-y-2 pl-6 marker:text-sage-600;
+  }
+  .prose-doc li {
+    @apply max-w-prose;
+  }
+  .prose-doc a {
+    @apply text-sage-700 underline decoration-sage-200 underline-offset-4 hover:decoration-sage-600;
+  }
+  .prose-doc strong {
+    @apply font-semibold text-ink;
+  }
+  .prose-doc blockquote {
+    @apply border-l-2 border-sage-200 pl-5 italic text-muted;
+  }
+  .prose-doc h2:first-child,
+  .prose-doc h3:first-child {
+    @apply mt-0;
+  }
+}
