@@ -3,10 +3,11 @@ import { practice } from "@/lib/site";
 // ---------------------------------------------------------------------------
 // Single source of truth for the "Which appointment should I book?" tool.
 //
-// Appointment lengths reflect the practice's standard and longer consultations
-// (a ~15-minute standard and an up-to-30-minute longer appointment). HotDoc's
-// booking page is JavaScript-rendered and could not be machine-read, so the
-// exact HotDoc reason-for-visit labels should be confirmed and the
+// Appointment lengths: a ~15-minute standard consultation, an up-to-30-minute
+// long consultation, and a dedicated 45-minute "New patient" appointment
+// (confirmed by the practice). HotDoc's booking page is JavaScript-rendered and
+// could not be machine-read, so the exact HotDoc reason-for-visit labels for
+// the standard/long consultations should still be confirmed and the
 // `bookingName` values updated to match precisely. Booking deep-links to a
 // specific appointment type are not reliably supported by HotDoc, so the tool
 // links to the doctor's booking page and shows the exact appointment name to
@@ -20,7 +21,7 @@ import { practice } from "@/lib/site";
 
 export const BOOKING_URL = practice.bookingUrl;
 
-export type AppointmentTypeId = "standard" | "long";
+export type AppointmentTypeId = "standard" | "long" | "new_patient";
 
 export type AppointmentType = {
   id: string;
@@ -49,6 +50,14 @@ export const appointmentTypes: Record<AppointmentTypeId, AppointmentType> = {
     displayName: "Long appointment",
     bookingName: "Long consultation",
     duration: "Up to 30 minutes",
+    dedicated: false,
+    bookingUrl: BOOKING_URL,
+  },
+  new_patient: {
+    id: "new_patient",
+    displayName: "New patient appointment",
+    bookingName: "New patient",
+    duration: "45 minutes",
     dedicated: false,
     bookingUrl: BOOKING_URL,
   },
@@ -106,15 +115,13 @@ export type Recommendation = {
 
 // Deterministic mapping — no LLM, no health data.
 export function recommend(answer: AnswerId): Recommendation {
-  const { standard, long } = appointmentTypes;
+  const { standard, long, new_patient } = appointmentTypes;
   switch (answer) {
     case "first":
       return {
-        type: long,
+        type: new_patient,
         explanation:
-          "A longer appointment gives you and Amanda more time to go through your history and what you'd like help with.",
-        selectNote:
-          "If a “new patient” appointment is offered when you book, choose that.",
+          "A new patient appointment gives you and Amanda plenty of time to go through your history and what you'd like help with.",
       };
     case "one":
       return {
