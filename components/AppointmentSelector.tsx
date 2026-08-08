@@ -96,6 +96,12 @@ export function AppointmentSelector() {
             Choose a different appointment
           </button>
         </div>
+
+        <p className="mt-8 max-w-xl text-sm leading-6 text-muted">
+          This is a guide only. Depending on what comes up during your visit, a
+          standard appointment may sometimes need to be extended or followed up
+          &mdash; that&rsquo;s completely normal.
+        </p>
       </div>
     );
   }
