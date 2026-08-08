@@ -49,6 +49,20 @@ export const practice = {
 
 export const fullAddress = `${practice.streetAddress}, ${practice.suburb} NSW ${practice.postcode}`;
 
+// ---------------------------------------------------------------------------
+// HotDoc website widget (live availability).
+//
+// To activate: in the HotDoc dashboard go to Settings → "Website integration"
+// (or "Add HotDoc to your website"), copy the embed code, and paste it below as
+// a single string. Two kinds of embed are supported:
+//   • iframe-based  → paste the <iframe ...></iframe> markup here as-is.
+//   • script-based  → paste the markup here; if it includes a <script> tag,
+//     tell me and I'll switch the widget to load it via next/script (a plain
+//     string can't execute a <script>).
+// Leave empty to show the accurate "book online" fallback (no fabricated slot).
+// ---------------------------------------------------------------------------
+export const hotdocEmbed = "";
+
 // Qualifications relevant to Amanda's current focus. Skin-cancer and cosmetic
 // certificates are intentionally omitted from the new positioning.
 export const qualifications = [

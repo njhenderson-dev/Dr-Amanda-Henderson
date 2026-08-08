@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { BookButton } from "@/components/BookButton";
 import { Portrait } from "@/components/Portrait";
+import { BookingWidget } from "@/components/BookingWidget";
 import { BookingCta } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, jsonLdGraph, webPageSchema } from "@/lib/schema";
@@ -209,6 +210,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 6b — BOOK ONLINE / AVAILABILITY (above the articles) */}
+      <BookingWidget />
 
       {/* 7 — HELPFUL HEALTH INFORMATION */}
       {featuredArticles.length > 0 && (
