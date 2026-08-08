@@ -59,8 +59,10 @@ export default function AboutPage() {
             </div>
           </div>
           <Portrait
+            priority
+            sizes="(min-width: 1024px) 24rem, 80vw"
             className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft"
-            label="Photograph of Dr Amanda Henderson — to be supplied"
+            label="Dr Amanda Henderson, family GP in Maroubra, Sydney"
           />
         </div>
       </section>

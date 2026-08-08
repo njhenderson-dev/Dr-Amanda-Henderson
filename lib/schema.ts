@@ -35,8 +35,7 @@ export function physicianSchema() {
     jobTitle: "General Practitioner",
     description: site.description,
     url: site.url,
-    // Placeholder until real photography is supplied (see MIGRATION-PLAN.md §15).
-    image: `${site.url}/images/dr-amanda-henderson.svg`,
+    image: `${site.url}/images/dr-amanda-henderson-960.webp`,
     gender: "Female",
     medicalSpecialty: ["PrimaryCare", "Gynecologic", "Pediatric"],
     knowsAbout,

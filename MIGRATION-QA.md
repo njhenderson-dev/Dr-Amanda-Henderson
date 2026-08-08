@@ -90,9 +90,9 @@ done
 
 ## H. Assets to supply before launch (blockers)
 
-- [ ] Real photography of Dr Amanda Henderson → `public/images/` (hero, about, OG). Replace `components/Portrait.tsx` placeholder usage.
-- [ ] Migrate all legitimate images off the Squarespace CDN; re‑optimise locally (do not hotlink)
-- [ ] Raster OG image (1200×630) from brand photography (replaces `og-default.svg`)
+- [x] ~~Real photography of Dr Amanda Henderson~~ — migrated to `public/images/` (hero, about, OG); `Portrait.tsx` now renders the real photo.
+- [x] ~~Migrate legitimate images off the Squarespace CDN~~ — done via `scripts/fetch-images.mjs`; originals archived in `public/images/_archive/`, responsive WebP generated. (No hotlinking — safe when Squarespace is deleted.)
+- [x] ~~Raster OG image (1200×630)~~ — `og-amanda.jpg` generated from the portrait.
 - [ ] Confirmed practice opening hours → add to contact page + `MedicalClinic` `openingHours`
 - [ ] Verified `sameAs` profiles (HotDoc, Google Business Profile, AHPRA) → add to Physician schema
 - [ ] Google Search Console verification token + Google Analytics ID (bind to existing `data-cta` events)

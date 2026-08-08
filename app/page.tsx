@@ -67,7 +67,11 @@ export default function HomePage() {
           </div>
 
           <div className="relative">
-            <Portrait className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft" />
+            <Portrait
+              priority
+              sizes="(min-width: 1024px) 26rem, 80vw"
+              className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft"
+            />
           </div>
         </div>
 
@@ -156,8 +160,9 @@ export default function HomePage() {
         <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Portrait
             rounded="rounded-2xl"
+            sizes="(min-width: 1024px) 20rem, 70vw"
             className="mx-auto aspect-[4/5] w-full max-w-xs shadow-soft lg:order-1"
-            label="Photograph of Dr Amanda Henderson at the practice — to be supplied"
+            label="Dr Amanda Henderson"
           />
           <div className="lg:order-2">
             <p className="eyebrow">About Amanda</p>

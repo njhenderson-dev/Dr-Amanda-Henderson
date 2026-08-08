@@ -80,6 +80,7 @@ export type ServiceArea = {
   title: string;
   href: string;
   eyebrow: string;
+  image: { name: string; alt: string }; // header photo (migrated, in /public/images)
   summary: string; // homepage / card summary
   intro: string; // page lead
   covers: { heading: string; body: string }[];
@@ -100,6 +101,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Women's Health",
     href: "/womens-health",
     eyebrow: "Care across every life stage",
+    image: { name: "womens-health", alt: "A woman stretching outdoors at sunset" },
     summary:
       "Contraception, periods and pelvic pain, PCOS, breast concerns, sexual health, perimenopause and menopause — discussed properly and without judgement.",
     intro:
@@ -168,6 +170,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Pregnancy & Preconception Care",
     href: "/pregnancy-care",
     eyebrow: "From planning to postnatal",
+    image: { name: "pregnancy", alt: "A pregnant woman cradling her belly in soft light" },
     summary:
       "Preconception planning, shared antenatal care with the Royal Hospital for Women, and looking after you and your baby after the birth.",
     intro:
@@ -230,6 +233,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Children's Health",
     href: "/childrens-health",
     eyebrow: "Babies, children & families",
+    image: { name: "children", alt: "A newborn baby's feet cradled in a parent's hands" },
     summary:
       "Newborn and childhood care, feeding and development, immunisations, common illnesses, and taking parents' concerns seriously.",
     intro:
@@ -288,6 +292,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "General GP Care",
     href: "/general-gp-care",
     eyebrow: "Whole-person family medicine",
+    image: { name: "lifestyle", alt: "A person walking outdoors, keeping active" },
     summary:
       "The broad range of physical and mental health concerns people bring to their GP — plus preventative health, men's health, travel medicine and lifestyle care.",
     intro:
