@@ -140,16 +140,28 @@ export const serviceAreas: ServiceArea[] = [
       "We'll start by talking through what's brought you in and how it's affecting you. Depending on your concern that might involve an examination, blood tests, a cervical screening test or imaging. I'll explain what I'm looking for, what the options are, and we'll decide on the next step together. Some things are sorted in one visit; others are worth reviewing over time.",
     faqs: [
       {
-        q: "Can a GP help with perimenopause?",
-        a: "Yes. A GP is often the best place to start. We can confirm what's going on, rule out other causes, and discuss options ranging from lifestyle measures to menopausal hormone therapy, referring on only if needed.",
+        q: "Can a GP help with perimenopause and menopause?",
+        a: "Yes. A GP is often the best place to start. We can talk through your symptoms, check whether anything else might be contributing, and discuss the options — from lifestyle measures to menopausal hormone therapy (MHT) — referring on only if that's needed.",
       },
       {
-        q: "What contraception options can I discuss with my GP?",
-        a: "All of them — the pill, mini-pill, vaginal ring, implant, hormonal and copper IUDs, injections and non-hormonal options. We can weigh up effectiveness, bleeding patterns, side effects and your medical history to find a good fit.",
+        q: "When should I see a GP about heavy periods?",
+        a: "It's worth booking if your periods soak through pads or tampons quickly, last more than about a week, come with flooding or large clots, or leave you tired or short of breath. We can look for causes — such as iron deficiency, fibroids, PCOS or endometriosis — and talk through ways to manage them.",
+      },
+      {
+        q: "What contraception can I discuss with a GP?",
+        a: "All of it — the pill, mini-pill, vaginal ring, contraceptive implant (Implanon), hormonal and copper IUDs, the injection, and non-hormonal options. We can weigh up effectiveness, bleeding patterns, side effects and your history, and I can start or arrange most options.",
+      },
+      {
+        q: "Can a GP help with PCOS?",
+        a: "Yes. A GP can do the initial assessment for polycystic ovary syndrome — history, examination and the relevant tests — and help manage symptoms such as irregular periods, skin changes and fertility questions, involving a specialist when that's helpful.",
+      },
+      {
+        q: "I've found a breast lump — should I see a GP?",
+        a: "Yes, please book to have it checked. Most breast changes are not cancer, but a new lump, pain or change deserves an examination and, if needed, the right imaging so you get a clear answer.",
       },
       {
         q: "Do I need a referral for cervical screening?",
-        a: "No. Cervical screening is done in general practice, and self-collection is now an option for most people. You can book directly.",
+        a: "No. Cervical screening is done in general practice, and self-collection is now an option for most people. You can book directly — no referral needed.",
       },
     ],
     related: ["pregnancy-care", "general-gp-care"],
@@ -205,16 +217,28 @@ export const serviceAreas: ServiceArea[] = [
       "At a first pregnancy visit we'll confirm dates, talk through your health and history, arrange your early tests and screening, and set up a plan for the months ahead — including whether shared care suits you. There's no rush; it's a chance to ask anything that's on your mind.",
     faqs: [
       {
-        q: "What does a shared care GP do?",
+        q: "What is GP shared antenatal care?",
         a: "In shared antenatal care, your routine pregnancy check-ups happen with your GP close to home, while the hospital manages your scans, specialist care and the birth. It means continuity with someone who knows you, with the hospital's expertise behind you.",
       },
       {
-        q: "When should I see a GP before trying for a baby?",
-        a: "Ideally about three months before you start trying. That gives time to start folate, review medications and immunity, address any health issues and answer your questions — so you go into pregnancy well prepared.",
+        q: "Can a GP do pregnancy shared care with the Royal Hospital for Women?",
+        a: "Yes. I'm a registered shared antenatal care provider with the Royal Hospital for Women in Randwick, so many of your routine antenatal visits can happen here in Maroubra, coordinated with the hospital.",
       },
       {
-        q: "What can I talk to my GP about after having a baby?",
-        a: "Anything — your recovery, feeding, sleep, mood, contraception, and your baby's growth and development. The six-week check is a natural point to bring it all together, but you're welcome any time.",
+        q: "When should I see a GP before trying to get pregnant?",
+        a: "Ideally about three months before you start trying. That gives time to start folate, review your medications and immunity, address any health issues and answer your questions — so you go into pregnancy well prepared.",
+      },
+      {
+        q: "What happens at a pre-pregnancy (preconception) GP appointment?",
+        a: "We talk through your health and history, review any medications, check immunity and screening, recommend folate, and discuss anything specific to you — including planning after 35 or with an existing condition.",
+      },
+      {
+        q: "I've had a positive pregnancy test — what happens at the first GP visit?",
+        a: "We confirm your dates, talk through your health and history, arrange your early tests and screening, discuss food and medication safety, and set up a plan for the months ahead — including whether shared care suits you.",
+      },
+      {
+        q: "What does the six-week postnatal check involve?",
+        a: "It looks after both mother and baby — your recovery, mood and contraception, and your baby's growth, feeding and development. It's also a natural time to raise anything that's been on your mind.",
       },
     ],
     related: ["womens-health", "childrens-health"],
@@ -268,12 +292,28 @@ export const serviceAreas: ServiceArea[] = [
       "With children I take my time and follow the parent's lead — you know your child best. We'll talk through what you've noticed, examine your child gently, and make a plan together, whether that's simple reassurance, treatment, a review, or a referral if it's needed.",
     faqs: [
       {
-        q: "When should my baby have developmental checks?",
-        a: "There are recommended checks through the first years of life — around the newborn period, and at key ages as your child grows. They're a chance to review growth, development and immunisations, and to raise anything you've noticed.",
+        q: "When should I take my child to a GP for a fever?",
+        a: "See a GP promptly if your baby is under 3 months old with any fever, or if your child seems very unwell, is difficult to wake, is breathing quickly, has a rash that doesn't fade when pressed, isn't drinking or having wet nappies, or the fever lasts more than a couple of days. If your child is seriously unwell, call 000.",
       },
       {
-        q: "Can I see a GP about my child's development or behaviour?",
-        a: "Absolutely. A GP is a good first step. We can talk through your concerns, do an initial assessment, and coordinate referral to a paediatrician or allied health if that's the right next step.",
+        q: "What does a GP check at a baby's six-week appointment?",
+        a: "The six-week check reviews your baby's growth, feeding, movement and development, includes a gentle physical examination, and is usually when the first scheduled immunisations are given. It's also a chance to check in on how you're going as a parent.",
+      },
+      {
+        q: "When are childhood immunisations due?",
+        a: "Routine childhood immunisations follow the National Immunisation Program schedule, starting from birth and continuing through the early years and school age. I can give the routine vaccinations and talk through the schedule and any catch-ups.",
+      },
+      {
+        q: "Can a GP help with my child's eczema?",
+        a: "Yes. A GP can diagnose eczema, set up a day-to-day plan (including moisturisers and, when needed, other treatments), help you spot and treat flare-ups, and refer on if it's severe or not settling.",
+      },
+      {
+        q: "I'm worried about my child's development — should I see a GP?",
+        a: "Yes — a GP is a good first step. We can talk through what you've noticed, do an initial assessment, and coordinate referral to a paediatrician or allied health if that's the right next step. It's always reasonable to check.",
+      },
+      {
+        q: "Can I talk to a GP about ADHD concerns in my child?",
+        a: "Yes. A GP can listen to your concerns, do an initial assessment and help rule out other contributors, then guide you on next steps — which usually involves referral to a paediatrician for formal assessment.",
       },
     ],
     related: ["pregnancy-care", "general-gp-care"],
@@ -339,8 +379,24 @@ export const serviceAreas: ServiceArea[] = [
         a: "It means seeing a GP who knows you and your history, so your care builds over time rather than starting from scratch each visit. Continuity is linked to better health and fewer things falling through the cracks — and it's central to how I like to work.",
       },
       {
+        q: "What happens at a general health check?",
+        a: "We review your history and risk factors — things like blood pressure, cholesterol, diabetes risk, weight, smoking and family history — do any relevant tests, and make a plan for anything that needs attention or follow-up.",
+      },
+      {
+        q: "Can a GP help with my mental health?",
+        a: "Yes. Stress, anxiety, low mood and sleep are common reasons to see a GP. We can talk it through and make a plan, and where it helps, arrange a mental health care plan or referral.",
+      },
+      {
+        q: "Can a GP help with men's health checks?",
+        a: "Yes. A practical men's health check can cover heart and diabetes risk, blood pressure, weight, mental health and other concerns men often put off — in a straightforward visit.",
+      },
+      {
         q: "How far in advance should I book a travel appointment?",
         a: "Ideally six to eight weeks before you travel, as some vaccines need time or several doses. If your trip is sooner, it's still worth coming in — we'll do what we can.",
+      },
+      {
+        q: "What should I bring to my first appointment?",
+        a: "Bring your Medicare card, any current medications (or a list), details of your past medical history and immunisations if you have them, any recent test results or specialist letters, and a note of what you'd like to cover.",
       },
     ],
     related: ["womens-health", "childrens-health"],
@@ -361,6 +417,67 @@ export const serviceAreas: ServiceArea[] = [
 export function getServiceArea(slug: string) {
   return serviceAreas.find((s) => s.slug === slug);
 }
+
+// "In brief" — a concise, factual, citeable summary shown at the top of each
+// clinical hub. Facts only; no promotional language.
+export const inBriefByArea: Record<string, string[]> = {
+  "womens-health": [
+    "Dr Amanda Henderson provides women's health care at GP Maroubra, in South Maroubra.",
+    "Common reasons to visit include contraception, heavy or painful periods, PCOS, breast concerns, cervical screening, sexual health, and perimenopause or menopause.",
+    "Most concerns can be assessed and managed in general practice, with referral arranged when it's needed.",
+    "Cervical screening — including self-collection for most people — is available without a referral.",
+  ],
+  "pregnancy-care": [
+    "Dr Amanda Henderson offers preconception advice, shared antenatal care and postnatal care in Maroubra.",
+    "She is a registered shared antenatal care provider with the Royal Hospital for Women, Randwick.",
+    "It's ideal to see a GP about three months before trying to conceive.",
+    "Much of routine pregnancy care can happen locally, coordinated with the hospital.",
+  ],
+  "childrens-health": [
+    "Dr Amanda Henderson provides family GP care for babies and children at GP Maroubra.",
+    "This includes newborn and six-week checks, immunisations, feeding and development, and common childhood illnesses.",
+    "A GP is a good first step for concerns about development, behaviour, or conditions such as ADHD.",
+    "If a child is seriously unwell, call 000.",
+  ],
+  "general-gp-care": [
+    "Dr Amanda Henderson provides whole-person general practice for adults and families in Maroubra.",
+    "This covers everyday and ongoing health, mental health, preventative checks, men's health, travel medicine and lifestyle support.",
+    "Care emphasises prevention and continuity — knowing you over time.",
+  ],
+};
+
+// "Sources and further reading" — reputable Australian sources, per hub.
+// Every URL was checked to resolve (HTTP 200) at build time. Do not add a link
+// here without confirming it loads.
+export type SourceLink = { label: string; url: string; note?: string };
+
+export const furtherReadingByArea: Record<string, SourceLink[]> = {
+  "womens-health": [
+    { label: "Jean Hailes for Women's Health", url: "https://www.jeanhailes.org.au/", note: "Australian information on periods, PCOS, menopause and more" },
+    { label: "Healthdirect — Menopause", url: "https://www.healthdirect.gov.au/menopause" },
+    { label: "Healthdirect — Heavy periods", url: "https://www.healthdirect.gov.au/heavy-periods" },
+    { label: "Healthdirect — Cervical Screening Test", url: "https://www.healthdirect.gov.au/cervical-screening-test" },
+    { label: "RANZCOG", url: "https://ranzcog.edu.au/", note: "Royal Australian and New Zealand College of Obstetricians and Gynaecologists" },
+  ],
+  "pregnancy-care": [
+    { label: "Pregnancy, Birth and Baby", url: "https://www.pregnancybirthbaby.org.au/", note: "Australian Government pregnancy and parenting information" },
+    { label: "Royal Hospital for Women, Randwick", url: "https://www.seslhd.health.nsw.gov.au/royal-hospital-for-women" },
+    { label: "Healthdirect — Breastfeeding", url: "https://www.healthdirect.gov.au/breastfeeding" },
+    { label: "RANZCOG", url: "https://ranzcog.edu.au/" },
+  ],
+  "childrens-health": [
+    { label: "Healthdirect — Fever in children", url: "https://www.healthdirect.gov.au/fever-in-children" },
+    { label: "Healthdirect — Child development", url: "https://www.healthdirect.gov.au/child-development" },
+    { label: "Healthdirect — Eczema", url: "https://www.healthdirect.gov.au/eczema" },
+    { label: "NSW Health", url: "https://www.health.nsw.gov.au/", note: "Immunisation information and services in NSW" },
+  ],
+  "general-gp-care": [
+    { label: "Healthdirect — Men's health", url: "https://www.healthdirect.gov.au/mens-health" },
+    { label: "Healthdirect — Travel vaccinations", url: "https://www.healthdirect.gov.au/travel-vaccinations" },
+    { label: "Cancer Council Australia", url: "https://www.cancer.org.au/" },
+    { label: "RACGP", url: "https://www.racgp.org.au/", note: "Royal Australian College of General Practitioners" },
+  ],
+};
 
 // "What you can expect" (homepage) — the TANGIBLE experience of a visit: what
 // actually happens, how things are communicated, and what gets followed up.

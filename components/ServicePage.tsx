@@ -7,7 +7,14 @@ import {
   faqSchema,
   jsonLdGraph,
 } from "@/lib/schema";
-import { getServiceArea, serviceAreas, site, practice } from "@/lib/site";
+import {
+  getServiceArea,
+  serviceAreas,
+  site,
+  practice,
+  inBriefByArea,
+  furtherReadingByArea,
+} from "@/lib/site";
 import { getArticlesByCategory, categoryLabels } from "@/lib/articles";
 import type { ArticleCategory } from "@/lib/articles";
 
@@ -22,6 +29,9 @@ const categoryForSlug: Record<string, ArticleCategory> = {
 export function ServicePage({ slug }: { slug: string }) {
   const area = getServiceArea(slug);
   if (!area) return null;
+
+  const inBrief = inBriefByArea[slug] ?? [];
+  const sources = furtherReadingByArea[slug] ?? [];
 
   const crumbs = [
     { name: "Home", path: "/" },
@@ -90,6 +100,28 @@ export function ServicePage({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* In brief — concise, citeable summary */}
+      {inBrief.length > 0 && (
+        <section className="container-page pt-4">
+          <div className="rounded-2xl border border-line bg-canvas p-7 shadow-soft">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-sage-600">
+              In brief
+            </h2>
+            <ul className="mt-4 space-y-2.5">
+              {inBrief.map((point) => (
+                <li key={point} className="flex gap-3 leading-7 text-ink">
+                  <span
+                    aria-hidden="true"
+                    className="mt-2.5 inline-block h-1.5 w-1.5 flex-none rounded-full bg-sage-400"
+                  />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* What Amanda can help with */}
       <section className="container-page py-14">
         <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
@@ -136,6 +168,16 @@ export function ServicePage({ slug }: { slug: string }) {
             <p className="mt-6 max-w-prose leading-8 text-muted">
               {area.consultation}
             </p>
+            <p className="mt-4 max-w-prose leading-7 text-muted">
+              Care is provided by{" "}
+              <Link
+                href="/about"
+                className="font-medium text-sage-700 hover:underline"
+              >
+                Dr Amanda Henderson, a family GP (FRACGP) in Maroubra
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -165,6 +207,36 @@ export function ServicePage({ slug }: { slug: string }) {
                     {a.readingMinutes} min
                   </span>
                 </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Sources and further reading — reputable Australian sources */}
+      {sources.length > 0 && (
+        <section className="container-page pb-14">
+          <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
+            Sources &amp; further reading
+          </h2>
+          <p className="mt-3 max-w-prose leading-7 text-muted">
+            For general information from trusted Australian sources. These are a
+            starting point, not a substitute for advice about your own situation.
+          </p>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            {sources.map((s) => (
+              <li key={s.url}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener nofollow"
+                  className="flex flex-col rounded-xl border border-line bg-white/60 p-4 shadow-soft transition-colors hover:border-sage-200"
+                >
+                  <span className="font-medium text-sage-700">{s.label}</span>
+                  {s.note && (
+                    <span className="mt-0.5 text-sm text-muted">{s.note}</span>
+                  )}
+                </a>
               </li>
             ))}
           </ul>
