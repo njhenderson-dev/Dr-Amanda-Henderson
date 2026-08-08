@@ -10,7 +10,7 @@ import {
   practice,
   qualifications,
   serviceAreas,
-  expectations,
+  approach,
 } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -59,22 +59,28 @@ export default function AboutPage() {
             </div>
           </div>
           <Portrait
+            priority
+            sizes="(min-width: 1024px) 24rem, 80vw"
             className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft"
-            label="Photograph of Dr Amanda Henderson — to be supplied"
+            label="Dr Amanda Henderson, family GP in Maroubra, Sydney"
           />
         </div>
       </section>
 
-      {/* Approach */}
+      {/* Approach / philosophy */}
       <section className="bg-canvas">
         <div className="container-page py-16">
           <div className="max-w-2xl">
             <h2 className="font-serif text-3xl font-semibold sm:text-4xl">
               How I like to work
             </h2>
+            <p className="mt-4 text-lg leading-8 text-muted">
+              Beyond the specifics of any one visit, a few principles shape the
+              way I practise.
+            </p>
           </div>
           <dl className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {expectations.map((e) => (
+            {approach.map((e) => (
               <div key={e.title}>
                 <dt className="font-serif text-xl font-semibold text-ink">
                   {e.title}

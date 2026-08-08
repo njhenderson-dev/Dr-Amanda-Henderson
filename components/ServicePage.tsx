@@ -73,6 +73,21 @@ export function ServicePage({ slug }: { slug: string }) {
             </a>
           </div>
         </div>
+
+        <div className="mt-10 overflow-hidden rounded-2xl shadow-soft">
+          <img
+            src={`/images/${area.image.name}-1200.webp`}
+            srcSet={`/images/${area.image.name}-800.webp 800w, /images/${area.image.name}-1200.webp 1200w`}
+            sizes="(min-width: 1152px) 1088px, 92vw"
+            width={1200}
+            height={800}
+            alt={area.image.alt}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="aspect-[3/2] w-full object-cover"
+          />
+        </div>
       </section>
 
       {/* What Amanda can help with */}

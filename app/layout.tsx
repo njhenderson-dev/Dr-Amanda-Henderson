@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: "/images/og-default.svg",
+        url: "/images/og-amanda.jpg",
         width: 1200,
         height: 630,
         alt: "Dr Amanda Henderson, family GP in Maroubra, Sydney",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dr Amanda Henderson | Family GP, Maroubra Sydney",
     description: site.description,
-    images: ["/images/og-default.svg"],
+    images: ["/images/og-amanda.jpg"],
   },
   icons: { icon: "/favicon.svg" },
 };

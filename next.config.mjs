@@ -56,6 +56,18 @@ const nextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
         ],
       },
+      {
+        // Keep the Fees page out of search / AI indexes (belt-and-braces with
+        // the page's noindex metadata and robots.txt). Patients reach it via
+        // the site navigation, not search.
+        source: "/fees",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, noai, noimageai",
+          },
+        ],
+      },
     ];
   },
 };

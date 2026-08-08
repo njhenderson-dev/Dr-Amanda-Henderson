@@ -207,9 +207,12 @@ Warm, soft, editorial, spacious, premium‑but‑not‑luxurious. Palette: warm 
 
 ## 15. Assets / items to obtain before Squarespace is cancelled
 
-**Blocking for a polished launch:**
-1. **Real photography of Dr Amanda Henderson** (hero + about + OG image). Placeholders are in place (`components/Portrait.tsx`, `/public/images/`); replace before launch.
-2. **Original site images** — download all legitimate images from the Squarespace CDN (do not hotlink) and re‑optimise locally.
+**Migrated (done):**
+1. ~~Real photography of Dr Amanda Henderson~~ — **migrated.** Her portrait is downloaded, stored locally and optimised (`/public/images/dr-amanda-henderson-*.webp`, plus `og-amanda.jpg`), and now drives the hero, About page and social card.
+2. ~~Original site images~~ — **migrated.** All legitimate images were downloaded off the Squarespace CDN (`scripts/fetch-images.mjs`), archived at full size in `/public/images/_archive/`, and re‑encoded to responsive WebP. The retired skin/cosmetic image is archived only (not used). *Note: the eight non‑portrait images were Unsplash stock already on the old site; the tasteful, on‑theme ones now support the pillar pages, the rest are archived.*
+
+**Still to obtain (optional uplift):**
+- Additional real photography of Amanda / the practice / place (currently one genuine portrait); more would let us reduce reliance on stock.
 3. **Google Search Console** access/verification + export of indexed pages, top queries, clicks/impressions, and any existing manual redirects — to confirm no high‑value URL is missed and to monitor post‑launch. (Not available in this environment; assumed handled at DNS/host.)
 4. **Google Analytics / existing analytics + conversion tracking** IDs (book/phone/directions events are already wired as `data-cta` attributes ready to bind).
 5. **Confirmed practice opening hours** (not published on the old site) — to complete `MedicalClinic` `openingHours` and the contact page.

@@ -43,10 +43,9 @@ export default function HomePage() {
               <br className="hidden sm:block" /> the time to listen.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
-              Hi, I&rsquo;m Dr Amanda Henderson. I&rsquo;m a family GP in
-              Maroubra, and I believe good medicine starts with listening
-              carefully, explaining things clearly, and understanding the whole
-              person &mdash; not just the problem that brought you in.
+              Hi, I&rsquo;m Dr Amanda Henderson, a family GP in Maroubra. I take
+              the time to understand what&rsquo;s going on, talk through your
+              concerns properly, and help you make sense of what comes next.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <BookButton />
@@ -67,7 +66,11 @@ export default function HomePage() {
           </div>
 
           <div className="relative">
-            <Portrait className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft" />
+            <Portrait
+              priority
+              sizes="(min-width: 1024px) 26rem, 80vw"
+              className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft"
+            />
           </div>
         </div>
 
@@ -128,14 +131,13 @@ export default function HomePage() {
       <section className="bg-canvas">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-2xl">
-            <p className="eyebrow">My approach</p>
+            <p className="eyebrow">Your visit</p>
             <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
               What you can expect
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted">
-              You&rsquo;ll be listened to properly, your concerns will be taken
-              seriously, and your care will be considered in the context of you
-              as a whole person.
+              The practical side of a visit matters as much as the medicine.
+              Here&rsquo;s what an appointment with me actually involves.
             </p>
           </div>
           <dl className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -156,8 +158,9 @@ export default function HomePage() {
         <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Portrait
             rounded="rounded-2xl"
+            sizes="(min-width: 1024px) 20rem, 70vw"
             className="mx-auto aspect-[4/5] w-full max-w-xs shadow-soft lg:order-1"
-            label="Photograph of Dr Amanda Henderson at the practice — to be supplied"
+            label="Dr Amanda Henderson"
           />
           <div className="lg:order-2">
             <p className="eyebrow">About Amanda</p>

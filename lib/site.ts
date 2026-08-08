@@ -73,6 +73,7 @@ export const nav = [
   { label: "Children's Health", href: "/childrens-health" },
   { label: "General GP Care", href: "/general-gp-care" },
   { label: "Articles", href: "/articles" },
+  { label: "Fees", href: "/fees" },
 ] as const;
 
 export type ServiceArea = {
@@ -80,6 +81,7 @@ export type ServiceArea = {
   title: string;
   href: string;
   eyebrow: string;
+  image: { name: string; alt: string }; // header photo (migrated, in /public/images)
   summary: string; // homepage / card summary
   intro: string; // page lead
   covers: { heading: string; body: string }[];
@@ -100,6 +102,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Women's Health",
     href: "/womens-health",
     eyebrow: "Care across every life stage",
+    image: { name: "womens-health", alt: "A woman stretching outdoors at sunset" },
     summary:
       "Contraception, periods and pelvic pain, PCOS, breast concerns, sexual health, perimenopause and menopause — discussed properly and without judgement.",
     intro:
@@ -168,6 +171,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Pregnancy & Preconception Care",
     href: "/pregnancy-care",
     eyebrow: "From planning to postnatal",
+    image: { name: "pregnancy", alt: "A pregnant woman cradling her belly in soft light" },
     summary:
       "Preconception planning, shared antenatal care with the Royal Hospital for Women, and looking after you and your baby after the birth.",
     intro:
@@ -230,6 +234,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Children's Health",
     href: "/childrens-health",
     eyebrow: "Babies, children & families",
+    image: { name: "children", alt: "A newborn baby's feet cradled in a parent's hands" },
     summary:
       "Newborn and childhood care, feeding and development, immunisations, common illnesses, and taking parents' concerns seriously.",
     intro:
@@ -288,6 +293,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "General GP Care",
     href: "/general-gp-care",
     eyebrow: "Whole-person family medicine",
+    image: { name: "lifestyle", alt: "A person walking outdoors, keeping active" },
     summary:
       "The broad range of physical and mental health concerns people bring to their GP — plus preventative health, men's health, travel medicine and lifestyle care.",
     intro:
@@ -356,23 +362,46 @@ export function getServiceArea(slug: string) {
   return serviceAreas.find((s) => s.slug === slug);
 }
 
-// "What you can expect" — the practice philosophy, reused on home & about.
+// "What you can expect" (homepage) — the TANGIBLE experience of a visit: what
+// actually happens, how things are communicated, and what gets followed up.
 export const expectations = [
   {
-    title: "To be heard",
-    body: "Your concerns should be taken seriously. I'll listen properly before we decide what to do.",
+    title: "Time to talk properly",
+    body: "Appointments that aren't rushed. Bring your list — if there's more than one thing on it, we'll agree what to sort today and what deserves a longer visit.",
   },
   {
-    title: "Clear explanations",
-    body: "Medical information should make sense — including your options and what happens next.",
+    title: "A plan in plain language",
+    body: "What's going on, what we're doing about it, and the next step — explained without jargon, and written down when that makes it easier to follow.",
   },
   {
-    title: "Thorough care",
-    body: "I try to consider the bigger picture rather than treating symptoms in isolation.",
+    title: "Options you can weigh up",
+    body: "When there's a real choice — a contraceptive, a test, a treatment — I'll lay out the options and the trade-offs, and the decision stays yours.",
   },
   {
-    title: "Continuity",
-    body: "Care works best as a relationship — a GP who gets to know you and your health over time.",
+    title: "Loose ends followed up",
+    body: "I'll chase your results, arrange referrals when you need them, and tell you plainly when something is better handled by a specialist or needs urgent care.",
+  },
+];
+
+// "How I like to work" (About) — the APPROACH and PHILOSOPHY: the principles
+// that shape every consultation, deliberately distinct from the tangible
+// "expectations" above and from the About-page introduction.
+export const approach = [
+  {
+    title: "Nothing's too awkward to raise",
+    body: "Contraception, sex, low mood, a worry you've carried for months — much of it only improves once it's said out loud. Whatever you bring won't be met with a raised eyebrow.",
+  },
+  {
+    title: "Ask me twice if you need to",
+    body: "There's no silly question. If an explanation doesn't land, tell me and I'll try it a different way — I'd far rather that than have you nod along and leave unsure.",
+  },
+  {
+    title: "Honest when it isn't clear-cut",
+    body: "Medicine often isn't black and white. When something is genuinely uncertain I'll say so, and we'll decide what's sensible together rather than force a tidy answer.",
+  },
+  {
+    title: "I keep the whole thread",
+    body: "Seeing the same families over time means I can join the dots — last year's result, the medication that didn't suit you, the thing we said we'd keep an eye on. You're never starting from scratch.",
   },
 ];
 
