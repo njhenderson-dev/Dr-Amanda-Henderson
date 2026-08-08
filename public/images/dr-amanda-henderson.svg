@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBF8F3"/>
+      <stop offset="100%" stop-color="#F4EEE4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="12" height="630" fill="#4F6F5E"/>
+  <text x="80" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="600" fill="#2C2824">Dr Amanda Henderson</text>
+  <text x="80" y="320" font-family="Georgia, serif" font-size="34" fill="#4F6F5E">Female Family GP · Maroubra, Sydney</text>
+  <text x="80" y="400" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#6A6157">Thoughtful, thorough GP care for every stage of life —</text>
+  <text x="80" y="438" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#6A6157">women's health, pregnancy, children &amp; family medicine.</text>
+  <circle cx="1050" cy="150" r="70" fill="#DCE5DD"/>
+  <text x="1050" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#4F6F5E">AH</text>
+</svg>
