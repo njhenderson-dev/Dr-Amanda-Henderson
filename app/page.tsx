@@ -273,9 +273,10 @@ export default function HomePage() {
               Serving the eastern suburbs
             </h3>
             <p className="mt-3 leading-7">
-              Conveniently located in South Maroubra for patients and families
-              across Maroubra, Coogee, Randwick, Kingsford, Malabar, Matraville
-              and Pagewood.
+              Conveniently located in South Maroubra, welcoming patients and
+              families from across Sydney&rsquo;s Eastern Suburbs, including
+              Maroubra, Coogee, Randwick, Kingsford, Malabar, Matraville and
+              Pagewood.
             </p>
             <h3 className="mt-6 font-serif text-lg font-semibold text-ink">
               In an emergency
