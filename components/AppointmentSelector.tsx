@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { practice } from "@/lib/site";
 import {
   answerOptions,
   recommend,
@@ -70,24 +71,46 @@ export function AppointmentSelector() {
         </p>
 
         <div className="mt-8 rounded-2xl border border-line bg-canvas p-5 text-sm text-muted">
-          When booking, choose{" "}
-          <span className="font-semibold text-ink">
-            “{result.type.bookingName}”
-          </span>
-          .{result.selectNote ? ` ${result.selectNote}` : ""}
+          {result.type.bookMethod === "phone" ? (
+            <>
+              New patient appointments are booked over the phone. Please call the
+              practice on{" "}
+              <span className="font-semibold text-ink">{practice.phone}</span>{" "}
+              to book your first appointment.
+            </>
+          ) : (
+            <>
+              When booking, choose{" "}
+              <span className="font-semibold text-ink">
+                “{result.type.bookingName}”
+              </span>
+              .{result.selectNote ? ` ${result.selectNote}` : ""}
+            </>
+          )}
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a
-            href={result.type.bookingUrl}
-            target="_blank"
-            rel="noopener"
-            data-cta="book_appointment"
-            onClick={() => track("booking_clicked")}
-            className="btn-primary px-8 py-4 text-lg"
-          >
-            Book this appointment
-          </a>
+          {result.type.bookMethod === "phone" ? (
+            <a
+              href={practice.phoneHref}
+              data-cta="call_practice"
+              onClick={() => track("booking_clicked")}
+              className="btn-primary px-8 py-4 text-lg"
+            >
+              Call {practice.phone}
+            </a>
+          ) : (
+            <a
+              href={result.type.bookingUrl}
+              target="_blank"
+              rel="noopener"
+              data-cta="book_appointment"
+              onClick={() => track("booking_clicked")}
+              className="btn-primary px-8 py-4 text-lg"
+            >
+              Book this appointment
+            </a>
+          )}
           <button
             type="button"
             onClick={reset}

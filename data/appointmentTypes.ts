@@ -34,6 +34,8 @@ export type AppointmentType = {
   /** Whether this is a dedicated (non-generic) appointment type. */
   dedicated: boolean;
   bookingUrl: string;
+  /** How this appointment is booked. New patients must phone the practice. */
+  bookMethod: "online" | "phone";
 };
 
 export const appointmentTypes: Record<AppointmentTypeId, AppointmentType> = {
@@ -44,6 +46,7 @@ export const appointmentTypes: Record<AppointmentTypeId, AppointmentType> = {
     duration: "About 15 minutes",
     dedicated: false,
     bookingUrl: BOOKING_URL,
+    bookMethod: "online",
   },
   long: {
     id: "long",
@@ -52,6 +55,7 @@ export const appointmentTypes: Record<AppointmentTypeId, AppointmentType> = {
     duration: "Up to 30 minutes",
     dedicated: false,
     bookingUrl: BOOKING_URL,
+    bookMethod: "online",
   },
   new_patient: {
     id: "new_patient",
@@ -60,6 +64,8 @@ export const appointmentTypes: Record<AppointmentTypeId, AppointmentType> = {
     duration: "45 minutes",
     dedicated: false,
     bookingUrl: BOOKING_URL,
+    // New patients must phone the practice to book their first appointment.
+    bookMethod: "phone",
   },
 };
 
