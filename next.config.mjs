@@ -7,30 +7,33 @@
 // homepage / "/services" page — there was no standalone skin/cosmetic URL to
 // retire, so no misleading redirect is created. See MIGRATION-PLAN.md §5.
 //
-// All redirects are single-hop 301s (permanent) to avoid redirect chains.
+// All redirects are single-hop 301s to avoid redirect chains. We set an
+// explicit statusCode of 301 (rather than `permanent: true`, which Next emits
+// as 308) to match the migration spec and maximise crawler/tooling
+// compatibility.
 // ---------------------------------------------------------------------------
 
-const permanent = true;
+const s301 = 301;
 
 const redirects = async () => [
   // Old /services duplicated the homepage → consolidate to canonical home.
-  { source: "/services", destination: "/", permanent },
+  { source: "/services", destination: "/", statusCode: s301 },
 
   // Pillar pages moved to clean, consistent slugs.
-  { source: "/womenshealth", destination: "/womens-health", permanent },
-  { source: "/paediatrics", destination: "/childrens-health", permanent },
+  { source: "/womenshealth", destination: "/womens-health", statusCode: s301 },
+  { source: "/paediatrics", destination: "/childrens-health", statusCode: s301 },
 
   // Articles moved from /amanda-henderson-articles/* to /articles/*.
-  { source: "/amanda-henderson-articles", destination: "/articles", permanent },
+  { source: "/amanda-henderson-articles", destination: "/articles", statusCode: s301 },
   {
     source: "/amanda-henderson-articles/:slug",
     destination: "/articles/:slug",
-    permanent,
+    statusCode: s301,
   },
 
   // Common alternates / safety nets.
-  { source: "/book", destination: "/contact", permanent },
-  { source: "/blog", destination: "/articles", permanent },
+  { source: "/book", destination: "/contact", statusCode: s301 },
+  { source: "/blog", destination: "/articles", statusCode: s301 },
 ];
 
 const nextConfig = {
