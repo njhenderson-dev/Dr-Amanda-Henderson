@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, changeFrequency: "monthly", priority: 1.0 },
     { url: `${base}/about`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/contact`, changeFrequency: "yearly", priority: 0.7 },
-    { url: `${base}/fees`, changeFrequency: "monthly", priority: 0.7 },
+    // /fees is deliberately omitted — it is noindex and reached via site nav only.
     { url: `${base}/articles`, changeFrequency: "weekly", priority: 0.8 },
   ];
 

@@ -8,8 +8,17 @@ import { fees, practice, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Fees | Dr Amanda Henderson, GP Maroubra",
   description:
-    "Dr Amanda Henderson is a private billing practice (not bulk billed). A 15-minute appointment is $110 (Medicare rebate $43.90); a 15–30-minute appointment is $186 (rebate $84.90).",
+    "Appointment fees for Dr Amanda Henderson, a private billing GP in Maroubra.",
   alternates: { canonical: "/fees" },
+  // Intentionally kept out of search engines and AI answer engines — patients
+  // reach this page from the site's navigation, not from search. (Paired with
+  // an X-Robots-Tag header in next.config.mjs, AI-crawler rules in robots.ts,
+  // and exclusion from sitemap.xml.)
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
 };
 
 const crumbs = [

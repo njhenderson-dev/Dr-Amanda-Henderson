@@ -43,10 +43,9 @@ export default function HomePage() {
               <br className="hidden sm:block" /> the time to listen.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
-              Hi, I&rsquo;m Dr Amanda Henderson. I&rsquo;m a family GP in
-              Maroubra, and I believe good medicine starts with listening
-              carefully, explaining things clearly, and understanding the whole
-              person &mdash; not just the problem that brought you in.
+              Hi, I&rsquo;m Dr Amanda Henderson, a family GP in Maroubra. I take
+              the time to understand what&rsquo;s going on, talk through your
+              concerns properly, and help you make sense of what comes next.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <BookButton />
