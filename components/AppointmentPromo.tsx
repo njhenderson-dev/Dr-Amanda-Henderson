@@ -10,10 +10,10 @@ export function AppointmentModule() {
       <div className="flex justify-center">
         <Link
           href={TOOL_PATH}
-          className="group inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full border border-line bg-canvas px-5 py-2.5 text-center text-sm shadow-soft transition-colors hover:border-sage-400"
+          className="group inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full bg-sage-600 px-6 py-3 text-center text-sm shadow-soft transition-colors hover:bg-sage-700"
         >
-          <span className="text-muted">Not sure which appointment to book?</span>
-          <span className="font-medium text-sage-700 group-hover:underline">
+          <span className="text-sage-50">Not sure which appointment to book?</span>
+          <span className="font-semibold text-white group-hover:underline">
             Find my appointment →
           </span>
         </Link>
