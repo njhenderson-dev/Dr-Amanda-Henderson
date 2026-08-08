@@ -40,14 +40,15 @@ export default function ArticlesPage() {
           "@id": `${site.url}/articles/#blog`,
           name: "Health Articles by Dr Amanda Henderson",
           url: `${site.url}/articles`,
-          author: { "@id": IDS.physician },
+          author: { "@id": IDS.person },
           publisher: { "@id": IDS.physician },
           blogPost: all.map((a) => ({
             "@type": "BlogPosting",
             headline: a.title,
             url: `${site.url}/articles/${a.slug}`,
             datePublished: a.datePublished,
-            author: { "@id": IDS.physician },
+            dateModified: a.dateModified,
+            author: { "@id": IDS.person },
           })),
         })}
       />

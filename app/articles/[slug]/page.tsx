@@ -86,6 +86,8 @@ export default async function ArticlePage({
             slug,
             datePublished: article.datePublished,
             dateModified: article.dateModified,
+            category: article.category,
+            categoryLabel: categoryLabels[article.category],
           }),
         )}
       />

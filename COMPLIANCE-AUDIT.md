@@ -7,7 +7,9 @@
 
 Each issue is classified as **Legal/regulatory requirement**, **Professional guidance**, or **Best-practice recommendation**, and given a risk level: **Critical / High / Medium / Low / Best-practice**.
 
-> **Update (2026-08-08):** Following this audit, all specific consultation fees and Medicare rebate figures were **removed** from the Fees page at the practice's direction. The page now states only that the practice is privately billed and that patients with a valid Medicare card are eligible for a Medicare rebate, and invites patients to call for a fee before booking. This **resolves findings F1, F2 and F3** (the accuracy of rebate amounts, the duration-vs-item mapping, and the implied-rebate risk no longer arise). The remaining Fees-page notes (F4 private-billing wording, F6 GST) are unaffected and non-blocking. **P1 (privacy policy) and A1/A3 remain outstanding.**
+> **Update (2026-08-08):** Following this audit, all specific consultation fees and Medicare rebate figures were **removed** from the Fees page at the practice's direction. The page now states only that the practice is privately billed and that patients with a valid Medicare card are eligible for a Medicare rebate, and invites patients to call for a fee before booking. This **resolves findings F1, F2 and F3** (the accuracy of rebate amounts, the duration-vs-item mapping, and the implied-rebate risk no longer arise). The remaining Fees-page notes (F4 private-billing wording, F6 GST) are unaffected and non-blocking.
+>
+> **Update (2026-08-08, schema):** **A1 is resolved** — the structured-data `medicalSpecialty` is now `PrimaryCare` only (women's/children's health remain *areas of interest* via `knowsAbout`), so nothing implies specialist registration. **P1 (privacy policy) and A3 (verify FRACGP / RHW shared-care / article authorship) remain outstanding.**
 
 ---
 

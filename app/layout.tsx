@@ -8,9 +8,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 import {
   jsonLdGraph,
+  personSchema,
   physicianSchema,
   clinicSchema,
   websiteSchema,
+  racgpSchema,
 } from "@/lib/schema";
 
 const display = Fraunces({
@@ -76,9 +78,11 @@ export default function RootLayout({
       <body className="min-h-screen">
         <JsonLd
           data={jsonLdGraph(
+            personSchema(),
             physicianSchema(),
             clinicSchema(),
             websiteSchema(),
+            racgpSchema(),
           )}
         />
         <a
