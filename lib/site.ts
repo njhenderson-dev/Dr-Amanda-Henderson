@@ -76,15 +76,6 @@ export const nav = [
   { label: "Fees", href: "/fees" },
 ] as const;
 
-// Private billing practice — consultation fees and Medicare rebates.
-// Out-of-pocket is derived (fee − rebate) so the figures can never drift apart.
-export const fees = {
-  items: [
-    { length: "15-minute appointment", fee: 110, rebate: 43.9 },
-    { length: "15–30-minute appointment", fee: 186, rebate: 84.9 },
-  ],
-} as const;
-
 export type ServiceArea = {
   slug: string;
   title: string;
