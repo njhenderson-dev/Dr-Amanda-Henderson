@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, BookingCta } from "@/components/ui";
+import { AppointmentPromoInline } from "@/components/AppointmentPromo";
 import { JsonLd } from "@/components/JsonLd";
 import {
   articleSchema,
@@ -86,6 +87,8 @@ export default async function ArticlePage({
             slug,
             datePublished: article.datePublished,
             dateModified: article.dateModified,
+            category: article.category,
+            categoryLabel: categoryLabels[article.category],
           }),
         )}
       />
@@ -108,6 +111,7 @@ export default async function ArticlePage({
               <Link href="/about" className="font-medium text-sage-700 hover:underline">
                 Dr Amanda Henderson
               </Link>
+              , FRACGP
             </span>
             <span aria-hidden="true">·</span>
             <span>{article.readingMinutes} min read</span>
@@ -132,17 +136,44 @@ export default async function ArticlePage({
           dangerouslySetInnerHTML={{ __html: article.html }}
         />
 
+        {/* Consistent YMYL trust block: author, qualifications, dates, disclaimer */}
         <div className="mt-12 rounded-2xl border border-line bg-canvas p-6 text-sm leading-6 text-muted">
-          <p className="font-medium text-ink">A note on this information</p>
-          <p className="mt-2">
-            This article is general information written by Dr Amanda Henderson
-            and is not a substitute for personal medical advice. For advice about
-            your own situation, please book an appointment. In an emergency, call{" "}
+          <p className="font-medium text-ink">
+            Written by{" "}
+            <Link href="/about" className="text-sage-700 hover:underline">
+              Dr Amanda Henderson
+            </Link>
+            , FRACGP &mdash; family GP, Maroubra
+          </p>
+          <p className="mt-1">
+            Published <time dateTime={article.datePublished}>{dateFmt.format(published)}</time>
+            {wasUpdated && (
+              <>
+                {" · "}Last reviewed{" "}
+                <time dateTime={article.dateModified}>{dateFmt.format(modified)}</time>
+              </>
+            )}
+          </p>
+          <p className="mt-3">
+            This article is general information and is not a substitute for
+            personal medical advice. For advice about your own situation, please{" "}
+            <Link href="/contact" className="text-sage-700 hover:underline">
+              book an appointment
+            </Link>
+            . In an emergency, call{" "}
             <a href="tel:000" className="font-medium text-ink">
               000
             </a>
-            .
+            . See our{" "}
+            <Link href="/editorial-policy" className="text-sage-700 hover:underline">
+              editorial policy
+            </Link>{" "}
+            for how this content is written and reviewed.
           </p>
+        </div>
+
+        <div className="mt-6">
+          <AppointmentPromoInline />
         </div>
       </article>
 

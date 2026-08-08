@@ -40,6 +40,11 @@ export function Footer() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link href="/editorial-policy" className="text-muted hover:text-ink">
+                Editorial policy
+              </Link>
+            </li>
           </ul>
         </nav>
 

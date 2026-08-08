@@ -4,21 +4,79 @@ import { Portrait } from "@/components/Portrait";
 import { BookButton } from "@/components/BookButton";
 import { Breadcrumbs, BookingCta } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  jsonLdGraph,
+  webPageSchema,
+  faqSchema,
+  IDS,
+} from "@/lib/schema";
 import {
   site,
   practice,
+  fullAddress,
   qualifications,
   serviceAreas,
   approach,
+  nearbyAreas,
 } from "@/lib/site";
 
+const description =
+  "Dr Amanda Henderson (MBBS, FRACGP) is a female family GP in Maroubra, Sydney and a shared antenatal care provider with the Royal Hospital for Women. Learn about her approach, qualifications and practice.";
+
 export const metadata: Metadata = {
-  title: "About Dr Amanda Henderson | Family GP, Maroubra",
-  description:
-    "Dr Amanda Henderson (MBBS, FRACGP) is a female family GP in Maroubra, Sydney and a shared antenatal care provider with the Royal Hospital for Women. Learn about her approach and qualifications.",
+  title: "About Dr Amanda Henderson | Female Family GP, Maroubra",
+  description,
   alternates: { canonical: "/about" },
+  openGraph: {
+    type: "profile",
+    title: "About Dr Amanda Henderson | Female Family GP, Maroubra",
+    description,
+    url: `${site.url}/about`,
+  },
 };
+
+// Entity fact FAQ — natural-language answers, all supported by the site.
+const aboutFaqs = [
+  {
+    q: "Who is Dr Amanda Henderson?",
+    a: "Dr Amanda Henderson is a female family GP (general practitioner) who consults at GP Maroubra in South Maroubra, in Sydney's eastern suburbs. She is a Fellow of the Royal Australian College of General Practitioners (FRACGP).",
+  },
+  {
+    q: "What kind of doctor is Dr Amanda Henderson?",
+    a: "She is a general practitioner — a family GP who cares for patients of all ages, with particular experience and interest in women's health, pregnancy, children's health and general family medicine.",
+  },
+  {
+    q: "What are Dr Amanda Henderson's qualifications?",
+    a: "Dr Henderson holds an MBBS and is a Fellow of the Royal Australian College of General Practitioners (FRACGP). She is a registered medical practitioner with AHPRA and a registered shared antenatal care provider with the Royal Hospital for Women in Randwick.",
+  },
+  {
+    q: "Where does Dr Amanda Henderson practise?",
+    a: `She consults at ${practice.name}, ${fullAddress}, welcoming patients and families from across Sydney's eastern suburbs, including ${nearbyAreas.slice(0, 7).join(", ")} and Pagewood.`,
+  },
+  {
+    q: "What does Dr Amanda Henderson particularly help with?",
+    a: "Women's health, pregnancy and preconception care (including shared antenatal care), children's health, general family medicine and preventative health.",
+  },
+];
+
+// Key-facts block (machine-extractable, human-readable).
+const factRows = [
+  { label: "Role", value: "Female family GP (general practitioner)" },
+  { label: "Qualifications", value: "MBBS · FRACGP" },
+  { label: "Practice", value: practice.name },
+  { label: "Location", value: fullAddress },
+  {
+    label: "Clinical interests",
+    value:
+      "Women's health · Pregnancy & preconception · Children's health · General family medicine · Preventative health",
+  },
+  {
+    label: "Hospital program",
+    value: "Shared antenatal care — Royal Hospital for Women, Randwick",
+  },
+  { label: "Areas served", value: `${nearbyAreas.join(", ")} (Sydney's eastern suburbs)` },
+];
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -28,7 +86,22 @@ const crumbs = [
 export default function AboutPage() {
   return (
     <>
-      <JsonLd data={jsonLdGraph(breadcrumbSchema(crumbs))} />
+      <JsonLd
+        data={jsonLdGraph(
+          breadcrumbSchema(crumbs),
+          webPageSchema({
+            type: "AboutPage",
+            path: "/about",
+            name: "About Dr Amanda Henderson",
+            description,
+            primaryImage: `${site.url}/images/dr-amanda-henderson-960.webp`,
+            aboutId: IDS.person,
+            mainEntityId: IDS.person,
+            hasBreadcrumb: true,
+          }),
+          faqSchema(aboutFaqs),
+        )}
+      />
 
       <section className="container-page pt-10">
         <Breadcrumbs items={crumbs} />
@@ -64,6 +137,36 @@ export default function AboutPage() {
             className="mx-auto aspect-[4/5] w-full max-w-sm shadow-soft"
             label="Dr Amanda Henderson, family GP in Maroubra, Sydney"
           />
+        </div>
+      </section>
+
+      {/* Key facts — natural-language, machine-extractable entity summary */}
+      <section className="container-page pb-4 pt-2">
+        <div className="rounded-2xl border border-line bg-white/60 p-7 shadow-soft sm:p-9">
+          <h2 className="font-serif text-2xl font-semibold text-ink">
+            Dr Amanda Henderson at a glance
+          </h2>
+          <p className="mt-3 max-w-3xl leading-8 text-muted">
+            Dr Amanda Henderson is a female family GP (FRACGP) who consults at{" "}
+            {practice.name}, {fullAddress}. She cares for patients of all ages,
+            with particular experience in women&rsquo;s health, pregnancy and
+            preconception care, children&rsquo;s health and general family
+            medicine, and welcomes patients from across Sydney&rsquo;s eastern
+            suburbs.
+          </p>
+          <dl className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+            {factRows.map((row) => (
+              <div
+                key={row.label}
+                className="flex flex-col border-t border-line pt-3 sm:flex-row sm:gap-4"
+              >
+                <dt className="w-40 flex-none text-sm font-semibold uppercase tracking-wide text-sage-600">
+                  {row.label}
+                </dt>
+                <dd className="mt-1 text-ink sm:mt-0">{row.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -183,6 +286,29 @@ export default function AboutPage() {
               .
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Entity FAQ — helps patients and answer engines alike */}
+      <section className="container-page py-16">
+        <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
+          Common questions about Dr Amanda Henderson
+        </h2>
+        <div className="mt-6 divide-y divide-line border-y border-line">
+          {aboutFaqs.map((f) => (
+            <details key={f.q} className="group py-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-ink">
+                {f.q}
+                <span
+                  className="text-sage-600 transition-transform group-open:rotate-45"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 max-w-prose leading-7 text-muted">{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 

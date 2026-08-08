@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs, BookingCta } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, jsonLdGraph, IDS } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  jsonLdGraph,
+  webPageSchema,
+  IDS,
+} from "@/lib/schema";
 import { site } from "@/lib/site";
 import {
   getAllArticles,
@@ -10,11 +15,19 @@ import {
   type ArticleCategory,
 } from "@/lib/articles";
 
+const description =
+  "Clear, practical health information written by Dr Amanda Henderson — on women's health, pregnancy, children's health and general practice.";
+
 export const metadata: Metadata = {
-  title: "Health Articles | Dr Amanda Henderson, GP Maroubra",
-  description:
-    "Clear, practical health information written by Dr Amanda Henderson — on women's health, pregnancy, children's health and general practice.",
+  title: "Health Articles by Dr Amanda Henderson | GP Maroubra",
+  description,
   alternates: { canonical: "/articles" },
+  openGraph: {
+    type: "website",
+    title: "Health Articles by Dr Amanda Henderson | GP Maroubra",
+    description,
+    url: `${site.url}/articles`,
+  },
 };
 
 const crumbs = [
@@ -35,19 +48,27 @@ export default function ArticlesPage() {
   return (
     <>
       <JsonLd
-        data={jsonLdGraph(breadcrumbSchema(crumbs), {
+        data={jsonLdGraph(breadcrumbSchema(crumbs), webPageSchema({
+          type: "CollectionPage",
+          path: "/articles",
+          name: "Health Articles by Dr Amanda Henderson",
+          description,
+          aboutId: IDS.person,
+          hasBreadcrumb: true,
+        }), {
           "@type": "Blog",
           "@id": `${site.url}/articles/#blog`,
           name: "Health Articles by Dr Amanda Henderson",
           url: `${site.url}/articles`,
-          author: { "@id": IDS.physician },
+          author: { "@id": IDS.person },
           publisher: { "@id": IDS.physician },
           blogPost: all.map((a) => ({
             "@type": "BlogPosting",
             headline: a.title,
             url: `${site.url}/articles/${a.slug}`,
             datePublished: a.datePublished,
-            author: { "@id": IDS.physician },
+            dateModified: a.dateModified,
+            author: { "@id": IDS.person },
           })),
         })}
       />

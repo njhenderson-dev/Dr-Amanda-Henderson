@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BookButton } from "@/components/BookButton";
+import { AppointmentPromo } from "@/components/AppointmentPromo";
 import { Breadcrumbs, BookingCta } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
@@ -89,6 +90,10 @@ export default function FeesPage() {
           >
             Call {practice.phone}
           </a>
+        </div>
+
+        <div className="mt-8 max-w-3xl">
+          <AppointmentPromo />
         </div>
       </section>
 
