@@ -11,10 +11,10 @@ import {
 import { site } from "@/lib/site";
 
 const description =
-  "How medical information on Dr Amanda Henderson's website is written, sourced, reviewed and corrected. All content is general information and does not replace individual medical advice.";
+  "How medical information on Dr Amanda Henderson's website is written, sourced, reviewed and corrected. All content is general information only.";
 
 export const metadata: Metadata = {
-  title: "Editorial Policy | Dr Amanda Henderson",
+  title: { absolute: "Editorial Policy | Dr Amanda Henderson" },
   description,
   alternates: { canonical: "/editorial-policy" },
   openGraph: {
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "Editorial Policy | Dr Amanda Henderson",
     description,
     url: `${site.url}/editorial-policy`,
+    images: ["/images/og-amanda.jpg"],
   },
 };
 

@@ -279,7 +279,9 @@ export function serviceMetadata(slug: string) {
   const area = getServiceArea(slug);
   if (!area) return {};
   return {
-    title: area.metaTitle,
+    // absolute bypasses the root layout's "%s | Dr Amanda Henderson" template
+    // (metaTitle already includes the brand, so the template would double it).
+    title: { absolute: area.metaTitle },
     description: area.metaDescription,
     alternates: { canonical: area.href },
     openGraph: {
@@ -287,6 +289,7 @@ export function serviceMetadata(slug: string) {
       description: area.metaDescription,
       url: `${site.url}${area.href}`,
       type: "website" as const,
+      images: ["/images/og-amanda.jpg"],
     },
   };
 }

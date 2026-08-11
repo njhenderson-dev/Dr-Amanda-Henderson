@@ -7,7 +7,7 @@ import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 import { practice, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Fees & billing | Dr Amanda Henderson, GP Maroubra",
+  title: { absolute: "Fees & billing | Dr Amanda Henderson, GP Maroubra" },
   description:
     "Dr Amanda Henderson is a private billing GP in Maroubra. Patients with a valid Medicare card are eligible for a Medicare rebate on their consultation.",
   alternates: { canonical: "/fees" },
