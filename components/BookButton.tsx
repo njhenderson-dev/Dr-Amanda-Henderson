@@ -4,7 +4,7 @@ type Props = {
   variant?: "primary" | "secondary";
   className?: string;
   children?: React.ReactNode;
-  // Analytics hook — a data attribute meaningful actions can be bound to.
+  // Analytics hook - a data attribute meaningful actions can be bound to.
   event?: string;
 };
 

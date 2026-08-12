@@ -5,7 +5,7 @@ import { practice, hotdocEmbed } from "@/lib/site";
 //
 // When `hotdocEmbed` (lib/site.ts) is set to HotDoc's iframe embed, the live
 // availability widget renders below the intro. Until then it shows an accurate
-// booking CTA that links to HotDoc — never a fabricated "next available" time.
+// booking CTA that links to HotDoc - never a fabricated "next available" time.
 export function BookingWidget() {
   return (
     <section className="container-page py-12">

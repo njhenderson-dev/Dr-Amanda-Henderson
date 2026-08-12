@@ -18,7 +18,7 @@ export const site = {
 } as const;
 
 export const practice = {
-  // Place of practice — distinct from Dr Henderson (the doctor).
+  // Place of practice - distinct from Dr Henderson (the doctor).
   name: "GP Maroubra",
   streetAddress: "14 Meagher Avenue",
   suburb: "South Maroubra",
@@ -76,10 +76,10 @@ export const qualifications = [
 export const credentials = [
   "Fellow of the Royal Australian College of General Practitioners (FRACGP)",
   "Female family GP in Maroubra, Sydney",
-  "Registered shared antenatal care provider — Royal Hospital for Women, Randwick",
+  "Registered shared antenatal care provider - Royal Hospital for Women, Randwick",
 ] as const;
 
-// Primary navigation — humans first. A small, clear set.
+// Primary navigation - humans first. A small, clear set.
 export const nav = [
   { label: "About", href: "/about" },
   { label: "Women's Health", href: "/womens-health" },
@@ -118,17 +118,17 @@ export const serviceAreas: ServiceArea[] = [
     eyebrow: "Care across every life stage",
     image: { name: "womens-health", alt: "A woman stretching outdoors at sunset" },
     summary:
-      "Contraception, periods and pelvic pain, PCOS, breast concerns, sexual health, perimenopause and menopause — discussed properly and without judgement.",
+      "Contraception, periods and pelvic pain, PCOS, breast concerns, sexual health, perimenopause and menopause - discussed properly and without judgement.",
     intro:
       "Women's health is one of the areas I care for most often, and one I find especially rewarding. Whether it's contraception, difficult periods, a breast concern, or the changes of perimenopause, my aim is the same: to listen carefully, explain your options clearly, and help you make a decision that suits your life.",
     covers: [
       {
         heading: "Contraception",
-        body: "From the pill to long-acting options such as the implant (Implanon) and IUDs, we can talk through what might suit your body, your plans and your preferences — and I can arrange or provide most options in the practice.",
+        body: "From the pill to long-acting options such as the implant (Implanon) and IUDs, we can talk through what might suit your body, your plans and your preferences - and I can arrange or provide most options in the practice.",
       },
       {
         heading: "Periods, pain and PCOS",
-        body: "Heavy, painful or irregular periods can have a real impact on everyday life. We can work through what might be causing them — including PCOS, endometriosis, fibroids or iron deficiency — and discuss the options available.",
+        body: "Heavy, painful or irregular periods can have a real impact on everyday life. We can work through what might be causing them - including PCOS, endometriosis, fibroids or iron deficiency - and discuss the options available.",
       },
       {
         heading: "Cervical screening & sexual health",
@@ -136,11 +136,11 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         heading: "Breast concerns",
-        body: "If you've noticed a lump, pain or change, we can examine it, arrange the right imaging if needed, and explain what happens next — and talk through screening when it's due.",
+        body: "If you've noticed a lump, pain or change, we can examine it, arrange the right imaging if needed, and explain what happens next - and talk through screening when it's due.",
       },
       {
         heading: "Perimenopause & menopause",
-        body: "Hot flushes, sleep changes, mood and brain fog are common and treatable. We can talk through what's happening and the options — including menopausal hormone therapy where appropriate.",
+        body: "Hot flushes, sleep changes, mood and brain fog are common and treatable. We can talk through what's happening and the options - including menopausal hormone therapy where appropriate.",
       },
     ],
     whenToSee: [
@@ -155,27 +155,27 @@ export const serviceAreas: ServiceArea[] = [
     faqs: [
       {
         q: "Can a GP help with perimenopause and menopause?",
-        a: "Yes. A GP is often the best place to start. We can talk through your symptoms, check whether anything else might be contributing, and discuss the options — from lifestyle measures to menopausal hormone therapy (MHT) — referring on only if that's needed.",
+        a: "Yes. A GP is often the best place to start. We can talk through your symptoms, check whether anything else might be contributing, and discuss the options - from lifestyle measures to menopausal hormone therapy (MHT) - referring on only if that's needed.",
       },
       {
         q: "When should I see a GP about heavy periods?",
-        a: "It's worth booking if your periods soak through pads or tampons quickly, last more than about a week, come with flooding or large clots, or leave you tired or short of breath. We can look for causes — such as iron deficiency, fibroids, PCOS or endometriosis — and talk through ways to manage them.",
+        a: "It's worth booking if your periods soak through pads or tampons quickly, last more than about a week, come with flooding or large clots, or leave you tired or short of breath. We can look for causes - such as iron deficiency, fibroids, PCOS or endometriosis - and talk through ways to manage them.",
       },
       {
         q: "What contraception can I discuss with a GP?",
-        a: "All of it — the pill, mini-pill, vaginal ring, contraceptive implant (Implanon), hormonal and copper IUDs, the injection, and non-hormonal options. We can weigh up effectiveness, bleeding patterns, side effects and your history, and I can start or arrange most options.",
+        a: "All of it - the pill, mini-pill, vaginal ring, contraceptive implant (Implanon), hormonal and copper IUDs, the injection, and non-hormonal options. We can weigh up effectiveness, bleeding patterns, side effects and your history, and I can start or arrange most options.",
       },
       {
         q: "Can a GP help with PCOS?",
-        a: "Yes. A GP can do the initial assessment for polycystic ovary syndrome — history, examination and the relevant tests — and help manage symptoms such as irregular periods, skin changes and fertility questions, involving a specialist when that's helpful.",
+        a: "Yes. A GP can do the initial assessment for polycystic ovary syndrome - history, examination and the relevant tests - and help manage symptoms such as irregular periods, skin changes and fertility questions, involving a specialist when that's helpful.",
       },
       {
-        q: "I've found a breast lump — should I see a GP?",
+        q: "I've found a breast lump - should I see a GP?",
         a: "Yes, please book to have it checked. Most breast changes are not cancer, but a new lump, pain or change deserves an examination and, if needed, the right imaging so you get a clear answer.",
       },
       {
         q: "Do I need a referral for cervical screening?",
-        a: "No. Cervical screening is done in general practice, and self-collection is now an option for most people. You can book directly — no referral needed.",
+        a: "No. Cervical screening is done in general practice, and self-collection is now an option for most people. You can book directly - no referral needed.",
       },
     ],
     related: ["pregnancy-care", "general-gp-care"],
@@ -201,11 +201,11 @@ export const serviceAreas: ServiceArea[] = [
     summary:
       "Preconception planning, shared antenatal care with the Royal Hospital for Women, and looking after you and your baby after the birth.",
     intro:
-      "Pregnancy is a good time to have a GP who knows you and can walk alongside you. I offer preconception advice, shared antenatal care with the Royal Hospital for Women, and postnatal care for you and your baby — so much of the journey can be looked after close to home.",
+      "Pregnancy is a good time to have a GP who knows you and can walk alongside you. I offer preconception advice, shared antenatal care with the Royal Hospital for Women, and postnatal care for you and your baby - so much of the journey can be looked after close to home.",
     covers: [
       {
         heading: "Before you conceive",
-        body: "Ideally we'd meet a few months before you start trying. We can review your health and medications, check immunity and screening, start folate, and talk through anything specific to you — including planning after 35 or with an existing condition.",
+        body: "Ideally we'd meet a few months before you start trying. We can review your health and medications, check immunity and screening, start folate, and talk through anything specific to you - including planning after 35 or with an existing condition.",
       },
       {
         heading: "Shared antenatal care",
@@ -213,11 +213,11 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         heading: "Through your pregnancy",
-        body: "We'll keep an eye on your health and your baby's, arrange the recommended tests and screening, and talk through the everyday questions — food and medication safety, nausea, exercise, and how you're feeling.",
+        body: "We'll keep an eye on your health and your baby's, arrange the recommended tests and screening, and talk through the everyday questions - food and medication safety, nausea, exercise, and how you're feeling.",
       },
       {
         heading: "After the birth",
-        body: "The six-week check looks after both mother and baby. We can also support feeding, sleep, recovery, contraception and perinatal mental health — for as long as you need.",
+        body: "The six-week check looks after both mother and baby. We can also support feeding, sleep, recovery, contraception and perinatal mental health - for as long as you need.",
       },
     ],
     whenToSee: [
@@ -228,7 +228,7 @@ export const serviceAreas: ServiceArea[] = [
       "Pregnancy or new parenthood is feeling hard",
     ],
     consultation:
-      "At a first pregnancy visit we'll confirm dates, talk through your health and history, arrange your early tests and screening, and set up a plan for the months ahead — including whether shared care suits you. There's no rush; it's a chance to ask anything that's on your mind.",
+      "At a first pregnancy visit we'll confirm dates, talk through your health and history, arrange your early tests and screening, and set up a plan for the months ahead - including whether shared care suits you. There's no rush; it's a chance to ask anything that's on your mind.",
     faqs: [
       {
         q: "What is GP shared antenatal care?",
@@ -240,19 +240,19 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         q: "When should I see a GP before trying to get pregnant?",
-        a: "Ideally about three months before you start trying. That gives time to start folate, review your medications and immunity, address any health issues and answer your questions — so you go into pregnancy well prepared.",
+        a: "Ideally about three months before you start trying. That gives time to start folate, review your medications and immunity, address any health issues and answer your questions - so you go into pregnancy well prepared.",
       },
       {
         q: "What happens at a pre-pregnancy (preconception) GP appointment?",
-        a: "We talk through your health and history, review any medications, check immunity and screening, recommend folate, and discuss anything specific to you — including planning after 35 or with an existing condition.",
+        a: "We talk through your health and history, review any medications, check immunity and screening, recommend folate, and discuss anything specific to you - including planning after 35 or with an existing condition.",
       },
       {
-        q: "I've had a positive pregnancy test — what happens at the first GP visit?",
-        a: "We confirm your dates, talk through your health and history, arrange your early tests and screening, discuss food and medication safety, and set up a plan for the months ahead — including whether shared care suits you.",
+        q: "I've had a positive pregnancy test - what happens at the first GP visit?",
+        a: "We confirm your dates, talk through your health and history, arrange your early tests and screening, discuss food and medication safety, and set up a plan for the months ahead - including whether shared care suits you.",
       },
       {
         q: "What does the six-week postnatal check involve?",
-        a: "It looks after both mother and baby — your recovery, mood and contraception, and your baby's growth, feeding and development. It's also a natural time to raise anything that's been on your mind.",
+        a: "It looks after both mother and baby - your recovery, mood and contraception, and your baby's growth, feeding and development. It's also a natural time to raise anything that's been on your mind.",
       },
     ],
     related: ["womens-health", "childrens-health"],
@@ -276,11 +276,11 @@ export const serviceAreas: ServiceArea[] = [
     summary:
       "Newborn and childhood care, feeding and development, immunisations, common illnesses, and taking parents' concerns seriously.",
     intro:
-      "Caring for children — and reassuring their parents — is one of the joys of family medicine. From newborn checks and immunisations to feeding, development and the common illnesses of childhood, I try to give parents clear guidance and take their concerns seriously.",
+      "Caring for children - and reassuring their parents - is one of the joys of family medicine. From newborn checks and immunisations to feeding, development and the common illnesses of childhood, I try to give parents clear guidance and take their concerns seriously.",
     covers: [
       {
         heading: "Babies & feeding",
-        body: "Weight and growth, feeding (breast and bottle), starting solids and introducing allergy foods, sleep and settling — the practical questions of the early months.",
+        body: "Weight and growth, feeding (breast and bottle), starting solids and introducing allergy foods, sleep and settling - the practical questions of the early months.",
       },
       {
         heading: "Development & checks",
@@ -292,7 +292,7 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         heading: "Common illnesses & concerns",
-        body: "Coughs, fevers, rashes, ears, tummies and childhood eczema — the everyday illnesses of childhood, plus early steps if you have concerns such as ADHD.",
+        body: "Coughs, fevers, rashes, ears, tummies and childhood eczema - the everyday illnesses of childhood, plus early steps if you have concerns such as ADHD.",
       },
     ],
     whenToSee: [
@@ -303,7 +303,7 @@ export const serviceAreas: ServiceArea[] = [
       "You'd like to talk through concerns such as ADHD",
     ],
     consultation:
-      "With children I take my time and follow the parent's lead — you know your child best. We'll talk through what you've noticed, examine your child gently, and make a plan together, whether that's simple reassurance, treatment, a review, or a referral if it's needed.",
+      "With children I take my time and follow the parent's lead - you know your child best. We'll talk through what you've noticed, examine your child gently, and make a plan together, whether that's simple reassurance, treatment, a review, or a referral if it's needed.",
     faqs: [
       {
         q: "When should I take my child to a GP for a fever?",
@@ -322,12 +322,12 @@ export const serviceAreas: ServiceArea[] = [
         a: "Yes. A GP can diagnose eczema, set up a day-to-day plan (including moisturisers and, when needed, other treatments), help you spot and treat flare-ups, and refer on if it's severe or not settling.",
       },
       {
-        q: "I'm worried about my child's development — should I see a GP?",
-        a: "Yes — a GP is a good first step. We can talk through what you've noticed, do an initial assessment, and coordinate referral to a paediatrician or allied health if that's the right next step. It's always reasonable to check.",
+        q: "I'm worried about my child's development - should I see a GP?",
+        a: "Yes - a GP is a good first step. We can talk through what you've noticed, do an initial assessment, and coordinate referral to a paediatrician or allied health if that's the right next step. It's always reasonable to check.",
       },
       {
         q: "Can I talk to a GP about ADHD concerns in my child?",
-        a: "Yes. A GP can listen to your concerns, do an initial assessment and help rule out other contributors, then guide you on next steps — which usually involves referral to a paediatrician for formal assessment.",
+        a: "Yes. A GP can listen to your concerns, do an initial assessment and help rule out other contributors, then guide you on next steps - which usually involves referral to a paediatrician for formal assessment.",
       },
     ],
     related: ["pregnancy-care", "general-gp-care"],
@@ -349,7 +349,7 @@ export const serviceAreas: ServiceArea[] = [
     eyebrow: "Whole-person family medicine",
     image: { name: "lifestyle", alt: "A person walking outdoors, keeping active" },
     summary:
-      "The broad range of physical and mental health concerns people bring to their GP — plus preventative health, men's health, travel medicine and lifestyle care.",
+      "The broad range of physical and mental health concerns people bring to their GP - plus preventative health, men's health, travel medicine and lifestyle care.",
     intro:
       "Much of general practice is the everyday work of family medicine: the new symptom, the ongoing condition, the check-up, the referral, and the mental health concern. I care for adults across the whole range of health issues, with an emphasis on prevention and on knowing you over time.",
     covers: [
@@ -363,19 +363,19 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         heading: "Preventative health",
-        body: "Health checks, screening, cardiovascular and diabetes risk, immunisations and healthy-lifestyle support — helping you understand and manage your longer-term health.",
+        body: "Health checks, screening, cardiovascular and diabetes risk, immunisations and healthy-lifestyle support - helping you understand and manage your longer-term health.",
       },
       {
         heading: "Men's health",
-        body: "The health check men often put off — heart and diabetes risk, blood pressure, prostate discussion, mental health — in a straightforward, practical visit.",
+        body: "The health check men often put off - heart and diabetes risk, blood pressure, prostate discussion, mental health - in a straightforward, practical visit.",
       },
       {
         heading: "Travel medicine",
-        body: "Pre-travel consultations covering vaccines, malaria prevention, and staying well abroad — ideally a few weeks before you go.",
+        body: "Pre-travel consultations covering vaccines, malaria prevention, and staying well abroad - ideally a few weeks before you go.",
       },
       {
         heading: "Lifestyle medicine",
-        body: "Weight, sleep, alcohol, smoking and wellbeing — practical, non-judgemental support for the changes you'd like to make.",
+        body: "Weight, sleep, alcohol, smoking and wellbeing - practical, non-judgemental support for the changes you'd like to make.",
       },
     ],
     whenToSee: [
@@ -390,11 +390,11 @@ export const serviceAreas: ServiceArea[] = [
     faqs: [
       {
         q: "What does continuity of care with a family GP mean?",
-        a: "It means seeing a GP who knows you and your history, so your care builds over time rather than starting from scratch each visit. Continuity is linked to better health and fewer things falling through the cracks — and it's central to how I like to work.",
+        a: "It means seeing a GP who knows you and your history, so your care builds over time rather than starting from scratch each visit. Continuity is linked to better health and fewer things falling through the cracks - and it's central to how I like to work.",
       },
       {
         q: "What happens at a general health check?",
-        a: "We review your history and risk factors — things like blood pressure, cholesterol, diabetes risk, weight, smoking and family history — do any relevant tests, and make a plan for anything that needs attention or follow-up.",
+        a: "We review your history and risk factors - things like blood pressure, cholesterol, diabetes risk, weight, smoking and family history - do any relevant tests, and make a plan for anything that needs attention or follow-up.",
       },
       {
         q: "Can a GP help with my mental health?",
@@ -402,11 +402,11 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         q: "Can a GP help with men's health checks?",
-        a: "Yes. A practical men's health check can cover heart and diabetes risk, blood pressure, weight, mental health and other concerns men often put off — in a straightforward visit.",
+        a: "Yes. A practical men's health check can cover heart and diabetes risk, blood pressure, weight, mental health and other concerns men often put off - in a straightforward visit.",
       },
       {
         q: "How far in advance should I book a travel appointment?",
-        a: "Ideally six to eight weeks before you travel, as some vaccines need time or several doses. If your trip is sooner, it's still worth coming in — we'll do what we can.",
+        a: "Ideally six to eight weeks before you travel, as some vaccines need time or several doses. If your trip is sooner, it's still worth coming in - we'll do what we can.",
       },
       {
         q: "What should I bring to my first appointment?",
@@ -432,14 +432,14 @@ export function getServiceArea(slug: string) {
   return serviceAreas.find((s) => s.slug === slug);
 }
 
-// "In brief" — a concise, factual, citeable summary shown at the top of each
+// "In brief" - a concise, factual, citeable summary shown at the top of each
 // clinical hub. Facts only; no promotional language.
 export const inBriefByArea: Record<string, string[]> = {
   "womens-health": [
     "Dr Amanda Henderson provides women's health care at GP Maroubra, in South Maroubra.",
     "Common reasons to visit include contraception, heavy or painful periods, PCOS, breast concerns, cervical screening, sexual health, and perimenopause or menopause.",
     "Most concerns can be assessed and managed in general practice, with referral arranged when it's needed.",
-    "Cervical screening — including self-collection for most people — is available without a referral.",
+    "Cervical screening - including self-collection for most people - is available without a referral.",
   ],
   "pregnancy-care": [
     "Dr Amanda Henderson offers preconception advice, shared antenatal care and postnatal care in Maroubra.",
@@ -456,11 +456,11 @@ export const inBriefByArea: Record<string, string[]> = {
   "general-gp-care": [
     "Dr Amanda Henderson provides whole-person general practice for adults and families in Maroubra.",
     "This covers everyday and ongoing health, mental health, preventative checks, men's health, travel medicine and lifestyle support.",
-    "Care emphasises prevention and continuity — knowing you over time.",
+    "Care emphasises prevention and continuity - knowing you over time.",
   ],
 };
 
-// "Sources and further reading" — reputable Australian sources, per hub.
+// "Sources and further reading" - reputable Australian sources, per hub.
 // Every URL was checked to resolve (HTTP 200) at build time. Do not add a link
 // here without confirming it loads.
 export type SourceLink = { label: string; url: string; note?: string };
@@ -468,45 +468,45 @@ export type SourceLink = { label: string; url: string; note?: string };
 export const furtherReadingByArea: Record<string, SourceLink[]> = {
   "womens-health": [
     { label: "Jean Hailes for Women's Health", url: "https://www.jeanhailes.org.au/", note: "Australian information on periods, PCOS, menopause and more" },
-    { label: "Healthdirect — Menopause", url: "https://www.healthdirect.gov.au/menopause" },
-    { label: "Healthdirect — Heavy periods", url: "https://www.healthdirect.gov.au/heavy-periods" },
-    { label: "Healthdirect — Cervical Screening Test", url: "https://www.healthdirect.gov.au/cervical-screening-test" },
+    { label: "Healthdirect - Menopause", url: "https://www.healthdirect.gov.au/menopause" },
+    { label: "Healthdirect - Heavy periods", url: "https://www.healthdirect.gov.au/heavy-periods" },
+    { label: "Healthdirect - Cervical Screening Test", url: "https://www.healthdirect.gov.au/cervical-screening-test" },
     { label: "RANZCOG", url: "https://ranzcog.edu.au/", note: "Royal Australian and New Zealand College of Obstetricians and Gynaecologists" },
   ],
   "pregnancy-care": [
     { label: "Pregnancy, Birth and Baby", url: "https://www.pregnancybirthbaby.org.au/", note: "Australian Government pregnancy and parenting information" },
     { label: "Royal Hospital for Women, Randwick", url: "https://www.seslhd.health.nsw.gov.au/royal-hospital-for-women" },
-    { label: "Healthdirect — Breastfeeding", url: "https://www.healthdirect.gov.au/breastfeeding" },
+    { label: "Healthdirect - Breastfeeding", url: "https://www.healthdirect.gov.au/breastfeeding" },
     { label: "RANZCOG", url: "https://ranzcog.edu.au/" },
   ],
   "childrens-health": [
-    { label: "Healthdirect — Fever in children", url: "https://www.healthdirect.gov.au/fever-in-children" },
-    { label: "Healthdirect — Child development", url: "https://www.healthdirect.gov.au/child-development" },
-    { label: "Healthdirect — Eczema", url: "https://www.healthdirect.gov.au/eczema" },
+    { label: "Healthdirect - Fever in children", url: "https://www.healthdirect.gov.au/fever-in-children" },
+    { label: "Healthdirect - Child development", url: "https://www.healthdirect.gov.au/child-development" },
+    { label: "Healthdirect - Eczema", url: "https://www.healthdirect.gov.au/eczema" },
     { label: "NSW Health", url: "https://www.health.nsw.gov.au/", note: "Immunisation information and services in NSW" },
   ],
   "general-gp-care": [
-    { label: "Healthdirect — Men's health", url: "https://www.healthdirect.gov.au/mens-health" },
-    { label: "Healthdirect — Travel vaccinations", url: "https://www.healthdirect.gov.au/travel-vaccinations" },
+    { label: "Healthdirect - Men's health", url: "https://www.healthdirect.gov.au/mens-health" },
+    { label: "Healthdirect - Travel vaccinations", url: "https://www.healthdirect.gov.au/travel-vaccinations" },
     { label: "Cancer Council Australia", url: "https://www.cancer.org.au/" },
     { label: "RACGP", url: "https://www.racgp.org.au/", note: "Royal Australian College of General Practitioners" },
   ],
 };
 
-// "What you can expect" (homepage) — the TANGIBLE experience of a visit: what
+// "What you can expect" (homepage) - the TANGIBLE experience of a visit: what
 // actually happens, how things are communicated, and what gets followed up.
 export const expectations = [
   {
     title: "Time to talk properly",
-    body: "Appointments that aren't rushed. Bring your list — if there's more than one thing on it, we'll agree what to sort today and what deserves a longer visit.",
+    body: "Appointments that aren't rushed. Bring your list - if there's more than one thing on it, we'll agree what to sort today and what deserves a longer visit.",
   },
   {
     title: "A plan in plain language",
-    body: "What's going on, what we're doing about it, and the next step — explained without jargon, and written down when that makes it easier to follow.",
+    body: "What's going on, what we're doing about it, and the next step - explained without jargon, and written down when that makes it easier to follow.",
   },
   {
     title: "Options you can weigh up",
-    body: "When there's a real choice — a contraceptive, a test, a treatment — I'll lay out the options and the trade-offs, and the decision stays yours.",
+    body: "When there's a real choice - a contraceptive, a test, a treatment - I'll lay out the options and the trade-offs, and the decision stays yours.",
   },
   {
     title: "Loose ends followed up",
@@ -514,17 +514,17 @@ export const expectations = [
   },
 ];
 
-// "How I like to work" (About) — the APPROACH and PHILOSOPHY: the principles
+// "How I like to work" (About) - the APPROACH and PHILOSOPHY: the principles
 // that shape every consultation, deliberately distinct from the tangible
 // "expectations" above and from the About-page introduction.
 export const approach = [
   {
     title: "Nothing's too awkward to raise",
-    body: "Contraception, sex, low mood, a worry you've carried for months — much of it only improves once it's said out loud. Whatever you bring won't be met with a raised eyebrow.",
+    body: "Contraception, sex, low mood, a worry you've carried for months - much of it only improves once it's said out loud. Whatever you bring won't be met with a raised eyebrow.",
   },
   {
     title: "Ask me twice if you need to",
-    body: "There's no silly question. If an explanation doesn't land, tell me and I'll try it a different way — I'd far rather that than have you nod along and leave unsure.",
+    body: "There's no silly question. If an explanation doesn't land, tell me and I'll try it a different way - I'd far rather that than have you nod along and leave unsure.",
   },
   {
     title: "Honest when it isn't clear-cut",
@@ -532,7 +532,7 @@ export const approach = [
   },
   {
     title: "I keep the whole thread",
-    body: "Seeing the same families over time means I can join the dots — last year's result, the medication that didn't suit you, the thing we said we'd keep an eye on. You're never starting from scratch.",
+    body: "Seeing the same families over time means I can join the dots - last year's result, the medication that didn't suit you, the thing we said we'd keep an eye on. You're never starting from scratch.",
   },
 ];
 

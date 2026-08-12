@@ -57,7 +57,7 @@ export default function WhichAppointmentPage() {
           </h1>
           <p className="mt-4 text-lg leading-8 text-muted">
             Answer one quick question and we&rsquo;ll suggest the right
-            appointment length &mdash; it takes about fifteen seconds.
+            appointment length - it takes about fifteen seconds.
           </p>
         </div>
       </section>

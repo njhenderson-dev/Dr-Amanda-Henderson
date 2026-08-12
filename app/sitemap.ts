@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, changeFrequency: "yearly", priority: 0.7 },
     { url: `${base}/editorial-policy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/which-appointment`, changeFrequency: "yearly", priority: 0.5 },
-    // /fees is deliberately omitted — it is noindex and reached via site nav only.
+    // /fees is deliberately omitted - it is noindex and reached via site nav only.
     { url: `${base}/articles`, changeFrequency: "weekly", priority: 0.8 },
   ];
 

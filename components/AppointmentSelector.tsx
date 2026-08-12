@@ -11,7 +11,7 @@ import {
   type Recommendation,
 } from "@/data/appointmentTypes";
 
-// Fire-and-forget analytics. Sends ONLY the event name — never the user's
+// Fire-and-forget analytics. Sends ONLY the event name - never the user's
 // selection, medical context or any identifying data. No-ops if no analytics
 // is installed.
 function track(event: string) {
@@ -123,7 +123,7 @@ export function AppointmentSelector() {
         <p className="mt-8 max-w-xl text-sm leading-6 text-muted">
           This is a guide only. Depending on what comes up during your visit, a
           standard appointment may sometimes need to be extended or followed up
-          &mdash; that&rsquo;s completely normal.
+          - that&rsquo;s completely normal.
         </p>
       </div>
     );

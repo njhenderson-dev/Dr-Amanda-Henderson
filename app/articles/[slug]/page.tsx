@@ -145,7 +145,7 @@ export default async function ArticlePage({
             <Link href="/about" className="text-sage-700 hover:underline">
               Dr Amanda Henderson
             </Link>
-            , FRACGP &mdash; family GP, Maroubra
+            , FRACGP - family GP, Maroubra
           </p>
           <p className="mt-1">
             Published <time dateTime={article.datePublished}>{dateFmt.format(published)}</time>

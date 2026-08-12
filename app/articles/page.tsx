@@ -16,7 +16,7 @@ import {
 } from "@/lib/articles";
 
 const description =
-  "Clear, practical health information written by Dr Amanda Henderson — on women's health, pregnancy, children's health and general practice.";
+  "Clear, practical health information written by Dr Amanda Henderson - on women's health, pregnancy, children's health and general practice.";
 
 export const metadata: Metadata = {
   title: { absolute: "Health Articles by Dr Amanda Henderson | GP Maroubra" },
@@ -82,7 +82,7 @@ export default function ArticlesPage() {
             Reading room
           </h1>
           <p className="mt-5 text-lg leading-8 text-muted">
-            A small, considered library of health information &mdash; written to
+            A small, considered library of health information - written to
             help you prepare for a visit, understand your options, and know when
             it&rsquo;s worth seeing a GP. Everything here is general information,
             not personal medical advice.

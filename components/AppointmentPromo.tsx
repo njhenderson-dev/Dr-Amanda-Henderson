@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const TOOL_PATH = "/which-appointment";
 
-// Compact single-line pill — used beneath the homepage hero. Prominent but
+// Compact single-line pill - used beneath the homepage hero. Prominent but
 // small, so it doesn't interrupt the homepage flow.
 export function AppointmentModule() {
   return (
@@ -22,7 +22,7 @@ export function AppointmentModule() {
   );
 }
 
-// Compact promo — used on service/pillar and fees pages.
+// Compact promo - used on service/pillar and fees pages.
 export function AppointmentPromo() {
   return (
     <div className="flex flex-col items-start gap-3 rounded-xl border border-line bg-canvas p-5 sm:flex-row sm:items-center sm:justify-between">
@@ -39,7 +39,7 @@ export function AppointmentPromo() {
   );
 }
 
-// Slim inline link — used on article pages so they aren't overwhelmed.
+// Slim inline link - used on article pages so they aren't overwhelmed.
 export function AppointmentPromoInline() {
   return (
     <p className="text-sm text-muted">

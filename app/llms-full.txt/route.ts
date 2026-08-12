@@ -11,12 +11,12 @@ export function GET() {
   const articles = getAllArticles();
 
   const lines = [
-    "# Dr Amanda Henderson — Female Family GP, Maroubra, Sydney",
+    "# Dr Amanda Henderson - Female Family GP, Maroubra, Sydney",
     "",
     `> Dr Amanda Henderson is a female family GP (general practitioner, FRACGP) who consults at ${practice.name}, ${fullAddress}, Australia. Clinical interests: women's health, pregnancy and preconception care (including shared antenatal care with the Royal Hospital for Women, Randwick), children's health, general family medicine and preventative health.`,
     "",
     "## Practice",
-    `- Practitioner: Dr Amanda Henderson — female family GP (FRACGP), AHPRA-registered`,
+    `- Practitioner: Dr Amanda Henderson - female family GP (FRACGP), AHPRA-registered`,
     `- Practice: ${practice.name}, ${fullAddress}, Australia`,
     `- Phone: ${practice.phone} · Bookings: HotDoc (${practice.bookingUrl})`,
     `- Areas served: ${nearbyAreas.join(", ")} (Sydney's eastern suburbs)`,
