@@ -40,7 +40,7 @@ export default function ContactPage() {
           webPageSchema({
             type: "ContactPage",
             path: "/contact",
-            name: "Contact & Location — Dr Amanda Henderson",
+            name: "Contact & Location - Dr Amanda Henderson",
             description,
             aboutId: IDS.clinic,
             mainEntityId: IDS.clinic,
@@ -92,7 +92,7 @@ export default function ContactPage() {
             <h2 className="font-serif text-xl font-semibold">Appointments</h2>
             <p className="mt-4 leading-7 text-muted">
               Book online any time, or call during practice hours. This is a
-              private billing practice &mdash; see{" "}
+              private billing practice - see{" "}
               <Link href="/fees" className="font-medium text-sage-700 hover:underline">
                 fees
               </Link>{" "}

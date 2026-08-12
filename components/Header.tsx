@@ -13,7 +13,7 @@ export function Header() {
         <Link
           href="/"
           className="flex flex-col leading-none"
-          aria-label={`${site.name} — home`}
+          aria-label={`${site.name} - home`}
           onClick={() => setOpen(false)}
         >
           <span className="font-serif text-lg font-semibold tracking-tight text-ink">

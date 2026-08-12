@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Dr Amanda Henderson is a private billing GP in Maroubra. Patients with a valid Medicare card are eligible for a Medicare rebate on their consultation.",
   alternates: { canonical: "/fees" },
-  // Intentionally kept out of search engines and AI answer engines — patients
+  // Intentionally kept out of search engines and AI answer engines - patients
   // reach this page from the site's navigation, not from search. (Paired with
   // an X-Robots-Tag header in next.config.mjs, AI-crawler rules in robots.ts,
   // and exclusion from sitemap.xml.)
@@ -77,7 +77,7 @@ export default function FeesPage() {
             >
               {practice.phone}
             </a>{" "}
-            &mdash; we&rsquo;re always happy to talk it through.
+            - we&rsquo;re always happy to talk it through.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export default function FeesPage() {
 
       <BookingCta
         heading="Any questions about billing?"
-        body="You're welcome to call the practice before you book — we're happy to help. Appointments can be made online through HotDoc, or by phone."
+        body="You're welcome to call the practice before you book - we're happy to help. Appointments can be made online through HotDoc, or by phone."
       />
     </>
   );

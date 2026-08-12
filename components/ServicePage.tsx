@@ -101,7 +101,7 @@ export function ServicePage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* In brief — concise, citeable summary */}
+      {/* In brief - concise, citeable summary */}
       {inBrief.length > 0 && (
         <section className="container-page pt-4">
           <div className="rounded-2xl border border-line bg-canvas p-7 shadow-soft">
@@ -219,7 +219,7 @@ export function ServicePage({ slug }: { slug: string }) {
         </section>
       )}
 
-      {/* Sources and further reading — reputable Australian sources */}
+      {/* Sources and further reading - reputable Australian sources */}
       {sources.length > 0 && (
         <section className="container-page pb-14">
           <h2 className="font-serif text-2xl font-semibold sm:text-3xl">

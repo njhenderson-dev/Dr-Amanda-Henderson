@@ -1,5 +1,5 @@
 // Real photograph of Dr Amanda Henderson (migrated from the original site and
-// stored locally in /public/images — see scripts/fetch-images.mjs).
+// stored locally in /public/images - see scripts/fetch-images.mjs).
 // Responsive WebP, fixed aspect ratio to avoid layout shift.
 
 type Props = {

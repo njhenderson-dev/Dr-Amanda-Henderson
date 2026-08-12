@@ -6,15 +6,15 @@ import { site, practice, serviceAreas, nearbyAreas } from "./site";
 // Three real-world entities, each with a stable @id so search engines and LLMs
 // resolve them to the same thing on every page:
 //
-//   Person  (#amanda)    — the human, Dr Amanda Henderson (author of articles)
-//   Physician (#physician) — the doctor as a medical provider / local entity
-//   MedicalClinic (#clinic) — GP Maroubra, the place she consults at
+//   Person  (#amanda)    - the human, Dr Amanda Henderson (author of articles)
+//   Physician (#physician) - the doctor as a medical provider / local entity
+//   MedicalClinic (#clinic) - GP Maroubra, the place she consults at
 //
 // Relationships are kept consistent site-wide:
-//   Person   —worksFor→        MedicalClinic
-//   Physician —memberOf→        MedicalClinic (and the RACGP)
-//   MedicalClinic —employee→    Person
-//   Article  —author/reviewedBy→ Person   —publisher→ Physician
+//   Person   -worksFor→        MedicalClinic
+//   Physician -memberOf→        MedicalClinic (and the RACGP)
+//   MedicalClinic -employee→    Person
+//   Article  -author/reviewedBy→ Person   -publisher→ Physician
 //
 // The Person and Physician nodes describe the same doctor (one as the human
 // author, one as the practising provider); they share identical name, image
@@ -45,7 +45,7 @@ const areaServed = [...nearbyAreas, "Eastern Suburbs, Sydney"].map((name) => ({
   name,
 }));
 
-// De-duplicated clinical interests — expressed as knowsAbout (areas of
+// De-duplicated clinical interests - expressed as knowsAbout (areas of
 // interest), never as specialties, so nothing implies specialist registration.
 const knowsAbout = Array.from(
   new Set(serviceAreas.flatMap((s) => s.knowsAbout)),
@@ -118,7 +118,7 @@ export function physicianSchema() {
       width: 600,
       height: 600,
     },
-    // Areas of interest only — NOT specialist registration.
+    // Areas of interest only - NOT specialist registration.
     medicalSpecialty: "PrimaryCare",
     knowsAbout,
     telephone: practice.phone,
@@ -166,7 +166,7 @@ export function websiteSchema() {
     "@type": "WebSite",
     "@id": IDS.website,
     url: site.url,
-    name: `${site.name} — ${site.role}, Maroubra`,
+    name: `${site.name} - ${site.role}, Maroubra`,
     inLanguage: "en-AU",
     publisher: { "@id": IDS.physician },
     about: { "@id": IDS.physician },

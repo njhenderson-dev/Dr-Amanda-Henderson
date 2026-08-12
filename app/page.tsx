@@ -18,7 +18,7 @@ import {
 import { getAllArticles } from "@/lib/articles";
 
 const description =
-  "Dr Amanda Henderson — a family GP in Maroubra who takes the time to listen, talk through your concerns, and help you make sense of what comes next.";
+  "Dr Amanda Henderson - a family GP in Maroubra who takes the time to listen, talk through your concerns, and help you make sense of what comes next.";
 
 export const metadata: Metadata = {
   // Homepage keeps the established, well-ranking title.
@@ -53,7 +53,7 @@ export default function HomePage() {
         )}
       />
 
-      {/* 1 — HERO: Amanda + positioning + Book CTA */}
+      {/* 1 - HERO: Amanda + positioning + Book CTA */}
       <section className="relative overflow-hidden">
         <div className="container-page grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="animate-fade-up">
@@ -94,7 +94,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* 2 — IMMEDIATE TRUST SIGNALS */}
+        {/* 2 - IMMEDIATE TRUST SIGNALS */}
         <div className="border-y border-line bg-canvas/60">
           <ul className="container-page flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-4 text-sm font-medium text-muted">
             {credentials.map((c) => (
@@ -110,10 +110,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2b — "WHICH APPOINTMENT?" MODULE (beneath the hero) */}
+      {/* 2b - "WHICH APPOINTMENT?" MODULE (beneath the hero) */}
       <AppointmentModule />
 
-      {/* 3 — HOW AMANDA CAN HELP */}
+      {/* 3 - HOW AMANDA CAN HELP */}
       <section className="container-page py-16 md:py-20">
         <div className="max-w-2xl">
           <p className="eyebrow">How I can help</p>
@@ -150,7 +150,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4 — WHAT YOU CAN EXPECT (approach) */}
+      {/* 4 - WHAT YOU CAN EXPECT (approach) */}
       <section className="bg-canvas">
         <div className="container-page py-16 md:py-20">
           <div className="max-w-2xl">
@@ -176,7 +176,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5 — SHORT ABOUT AMANDA */}
+      {/* 5 - SHORT ABOUT AMANDA */}
       <section className="container-page py-16 md:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Portrait
@@ -197,7 +197,7 @@ export default function HomePage() {
                 after women through the different stages of life, care for
                 pregnancies as a shared antenatal care provider with the Royal
                 Hospital for Women, and enjoy the variety of caring for whole
-                families &mdash; from babies and children to their parents and
+                families - from babies and children to their parents and
                 grandparents.
               </p>
               <p>
@@ -216,10 +216,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6b — BOOK ONLINE / AVAILABILITY (above the articles) */}
+      {/* 6b - BOOK ONLINE / AVAILABILITY (above the articles) */}
       <BookingWidget />
 
-      {/* 7 — HELPFUL HEALTH INFORMATION */}
+      {/* 7 - HELPFUL HEALTH INFORMATION */}
       {featuredArticles.length > 0 && (
         <section className="bg-canvas">
           <div className="container-page py-16 md:py-20">
@@ -261,7 +261,7 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* 8 — PRACTICE / LOCATION */}
+      {/* 8 - PRACTICE / LOCATION */}
       <section className="container-page py-16 md:py-20">
         <div className="grid gap-10 rounded-2xl border border-line bg-white/60 p-8 shadow-soft md:grid-cols-2 md:p-12">
           <div>
@@ -322,7 +322,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9 — FINAL BOOKING CTA */}
+      {/* 9 - FINAL BOOKING CTA */}
       <BookingCta
         heading="I'd be glad to help"
         body="If you're looking for a GP who will take the time to understand you, I'd be very happy to see you. Book online, or call the practice."

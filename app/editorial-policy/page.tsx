@@ -73,10 +73,10 @@ export default function EditorialPolicyPage() {
 
           <h2>How sources are chosen</h2>
           <p>
-            Information is based on reputable Australian sources — such as
+            Information is based on reputable Australian sources - such as
             Healthdirect, NSW Health, the Australian Government Department of
             Health, the RACGP, RANZCOG, the Royal Hospital for Women and the
-            Australian Immunisation Handbook — and on Dr Henderson&rsquo;s
+            Australian Immunisation Handbook - and on Dr Henderson&rsquo;s
             clinical training and experience. Where a page makes a substantive
             factual point, we aim to point to a trusted source under
             &ldquo;Sources and further reading&rdquo;. We do not cite sources we
@@ -101,7 +101,7 @@ export default function EditorialPolicyPage() {
             periodically and when relevant guidance changes. Where an article
             has not been separately reviewed by another clinician, we do not
             claim that it has been &ldquo;medically reviewed&rdquo; by someone
-            else — the author attribution reflects who is responsible for it.
+            else - the author attribution reflects who is responsible for it.
           </p>
 
           <h2>Corrections</h2>

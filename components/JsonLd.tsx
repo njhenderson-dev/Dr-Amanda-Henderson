@@ -1,4 +1,4 @@
-// Renders a JSON-LD script tag. Server component — emitted into static HTML.
+// Renders a JSON-LD script tag. Server component - emitted into static HTML.
 export function JsonLd({ data }: { data: object }) {
   return (
     <script

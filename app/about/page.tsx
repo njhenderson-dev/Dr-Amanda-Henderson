@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Entity fact FAQ — natural-language answers, all supported by the site.
+// Entity fact FAQ - natural-language answers, all supported by the site.
 const aboutFaqs = [
   {
     q: "Who is Dr Amanda Henderson?",
@@ -45,7 +45,7 @@ const aboutFaqs = [
   },
   {
     q: "What kind of doctor is Dr Amanda Henderson?",
-    a: "She is a general practitioner — a family GP who cares for patients of all ages, with particular experience and interest in women's health, pregnancy, children's health and general family medicine.",
+    a: "She is a general practitioner - a family GP who cares for patients of all ages, with particular experience and interest in women's health, pregnancy, children's health and general family medicine.",
   },
   {
     q: "What are Dr Amanda Henderson's qualifications?",
@@ -74,7 +74,7 @@ const factRows = [
   },
   {
     label: "Hospital program",
-    value: "Shared antenatal care — Royal Hospital for Women, Randwick",
+    value: "Shared antenatal care - Royal Hospital for Women, Randwick",
   },
   { label: "Areas served", value: `${nearbyAreas.join(", ")} (Sydney's eastern suburbs)` },
 ];
@@ -116,7 +116,7 @@ export default function AboutPage() {
               <p>
                 I&rsquo;m Dr Amanda Henderson, a female family GP based in
                 Maroubra in Sydney&rsquo;s eastern suburbs. I chose general
-                practice because I love the breadth of it &mdash; and because it
+                practice because I love the breadth of it - and because it
                 lets me get to know people and their families over time, rather
                 than for a single problem.
               </p>
@@ -141,7 +141,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Key facts — natural-language, machine-extractable entity summary */}
+      {/* Key facts - natural-language, machine-extractable entity summary */}
       <section className="container-page pb-4 pt-2">
         <div className="rounded-2xl border border-line bg-white/60 p-7 shadow-soft sm:p-9">
           <h2 className="font-serif text-2xl font-semibold text-ink">
@@ -256,7 +256,7 @@ export default function AboutPage() {
               </li>
             </ul>
             <p className="mt-6 text-sm leading-6 text-muted">
-              Prior qualifications include {qualifications.filter((q) => ["MAppIFin", "BComm", "BBus"].includes(q)).join(", ")} &mdash;
+              Prior qualifications include {qualifications.filter((q) => ["MAppIFin", "BComm", "BBus"].includes(q)).join(", ")} -
               a background that informs a considered, practical approach to care.
             </p>
           </div>
@@ -290,7 +290,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Entity FAQ — helps patients and answer engines alike */}
+      {/* Entity FAQ - helps patients and answer engines alike */}
       <section className="container-page py-16">
         <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
           Common questions about Dr Amanda Henderson

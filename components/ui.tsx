@@ -5,7 +5,7 @@ import { practice } from "@/lib/site";
 // Full-width booking band placed at the end of content pages.
 export function BookingCta({
   heading = "Ready to book?",
-  body = "Appointments can be made online through HotDoc, or call the practice — I'd be glad to help.",
+  body = "Appointments can be made online through HotDoc, or call the practice - I'd be glad to help.",
 }: {
   heading?: string;
   body?: string;

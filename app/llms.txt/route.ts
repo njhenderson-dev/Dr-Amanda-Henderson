@@ -1,7 +1,7 @@
 import { site, practice, fullAddress, serviceAreas, nearbyAreas } from "@/lib/site";
 
 // Experimental AI-discovery file (https://llmstxt.org). A concise, curated
-// pointer for answer engines — NOT a replacement for the crawlable HTML/schema.
+// pointer for answer engines - NOT a replacement for the crawlable HTML/schema.
 // The Fees page is intentionally omitted (it is noindex and excluded from AI
 // crawlers by request).
 export const dynamic = "force-static";
@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export function GET() {
   const u = site.url;
   const lines = [
-    "# Dr Amanda Henderson — Female Family GP, Maroubra, Sydney",
+    "# Dr Amanda Henderson - Female Family GP, Maroubra, Sydney",
     "",
     `> Dr Amanda Henderson is a female family GP (general practitioner, FRACGP) who consults at ${practice.name}, ${fullAddress}, Australia. She cares for patients of all ages, with particular experience and interest in women's health, pregnancy and preconception care (including shared antenatal care with the Royal Hospital for Women, Randwick), children's health, general family medicine and preventative health. She welcomes patients from across Sydney's eastern suburbs.`,
     "",
@@ -22,7 +22,7 @@ export function GET() {
     `- [Health articles](${u}/articles): medical articles written by Dr Amanda Henderson`,
     "",
     "## Practice",
-    `- Practitioner: Dr Amanda Henderson — female family GP (FRACGP)`,
+    `- Practitioner: Dr Amanda Henderson - female family GP (FRACGP)`,
     `- Practice: ${practice.name}, ${fullAddress}, Australia`,
     `- Phone: ${practice.phone}`,
     `- Bookings: HotDoc (${practice.bookingUrl})`,
