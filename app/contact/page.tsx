@@ -11,10 +11,10 @@ import {
 } from "@/lib/schema";
 import { practice, fullAddress, site } from "@/lib/site";
 
-const description = `Contact Dr Amanda Henderson at ${practice.name}, ${fullAddress}. Book online via HotDoc or call ${practice.phone}. After-hours and emergency information.`;
+const description = `Contact Dr Amanda Henderson at ${practice.name}, ${fullAddress}. Book online via HotDoc or call ${practice.phone}.`;
 
 export const metadata: Metadata = {
-  title: "Contact & Location | Dr Amanda Henderson, GP Maroubra",
+  title: { absolute: "Contact & Location | Dr Amanda Henderson, GP Maroubra" },
   description,
   alternates: { canonical: "/contact" },
   openGraph: {
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "Contact & Location | Dr Amanda Henderson, GP Maroubra",
     description,
     url: `${site.url}/contact`,
+    images: ["/images/og-amanda.jpg"],
   },
 };
 

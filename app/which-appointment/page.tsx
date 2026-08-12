@@ -14,7 +14,7 @@ const description =
   "A quick, private tool to help you choose the right appointment length with Dr Amanda Henderson. No personal or medical information required.";
 
 export const metadata: Metadata = {
-  title: "Which appointment should I book? | Dr Amanda Henderson",
+  title: { absolute: "Which appointment should I book? | Dr Amanda Henderson" },
   description,
   alternates: { canonical: "/which-appointment" },
   openGraph: {
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "Which appointment should I book? | Dr Amanda Henderson",
     description,
     url: `${site.url}/which-appointment`,
+    images: ["/images/og-amanda.jpg"],
   },
 };
 

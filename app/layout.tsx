@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileBookBar } from "@/components/MobileBookBar";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 import {
@@ -97,6 +98,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <MobileBookBar />
+        <GoogleAnalytics />
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ const description =
   "Clear, practical health information written by Dr Amanda Henderson — on women's health, pregnancy, children's health and general practice.";
 
 export const metadata: Metadata = {
-  title: "Health Articles by Dr Amanda Henderson | GP Maroubra",
+  title: { absolute: "Health Articles by Dr Amanda Henderson | GP Maroubra" },
   description,
   alternates: { canonical: "/articles" },
   openGraph: {
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title: "Health Articles by Dr Amanda Henderson | GP Maroubra",
     description,
     url: `${site.url}/articles`,
+    images: ["/images/og-amanda.jpg"],
   },
 };
 

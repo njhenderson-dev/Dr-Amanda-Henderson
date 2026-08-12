@@ -6,6 +6,7 @@ import { AppointmentPromoInline } from "@/components/AppointmentPromo";
 import { JsonLd } from "@/components/JsonLd";
 import {
   articleSchema,
+  articleImage,
   breadcrumbSchema,
   jsonLdGraph,
 } from "@/lib/schema";
@@ -43,6 +44,7 @@ export async function generateMetadata({
       publishedTime: article.datePublished,
       modifiedTime: article.dateModified,
       authors: ["Dr Amanda Henderson"],
+      images: [articleImage(article.category)],
     },
   };
 }

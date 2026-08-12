@@ -22,10 +22,10 @@ import {
 } from "@/lib/site";
 
 const description =
-  "Dr Amanda Henderson (MBBS, FRACGP) is a female family GP in Maroubra, Sydney and a shared antenatal care provider with the Royal Hospital for Women. Learn about her approach, qualifications and practice.";
+  "Dr Amanda Henderson (MBBS, FRACGP) is a female family GP in Maroubra and a registered shared antenatal care provider with the Royal Hospital for Women.";
 
 export const metadata: Metadata = {
-  title: "About Dr Amanda Henderson | Female Family GP, Maroubra",
+  title: { absolute: "About Dr Amanda Henderson | Female Family GP, Maroubra" },
   description,
   alternates: { canonical: "/about" },
   openGraph: {
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     title: "About Dr Amanda Henderson | Female Family GP, Maroubra",
     description,
     url: `${site.url}/about`,
+    images: ["/images/og-amanda.jpg"],
   },
 };
 
