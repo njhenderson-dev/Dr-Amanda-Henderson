@@ -18,7 +18,7 @@ import {
 import { getAllArticles } from "@/lib/articles";
 
 const description =
-  "Dr Amanda Henderson is a female family GP in Maroubra, Sydney — thoughtful, thorough care with a particular interest in women's health, pregnancy, children and family medicine.";
+  "Dr Amanda Henderson — a family GP in Maroubra who takes the time to understand what's going on, talk through your concerns properly, and help you make sense of what comes next.";
 
 export const metadata: Metadata = {
   // Homepage keeps the established, well-ranking title.
