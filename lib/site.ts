@@ -63,6 +63,32 @@ export const fullAddress = `${practice.streetAddress}, ${practice.suburb} NSW ${
 // ---------------------------------------------------------------------------
 export const hotdocEmbed = "";
 
+// ---------------------------------------------------------------------------
+// Verified local / entity signals for the MedicalClinic structured data.
+// These strengthen local SEO and the knowledge/local pack, but ONLY when the
+// values are confirmed. Leave them empty until verified — empty values are
+// omitted from the JSON-LD (never emitted blank), so nothing is invented.
+//
+// TODO (needs verified input):
+//   • openingHours — the practice's real consulting hours, e.g.
+//       [{ days: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+//          opens: "09:00", closes: "17:00" }]
+//     (days use full English weekday names; times are 24-hour "HH:MM").
+//   • geo — the practice's latitude/longitude.
+//   • sameAs — verified public profiles that belong to THIS Dr Amanda Henderson
+//     / GP Maroubra (e.g. the practice's Google Business Profile URL). Never add
+//     an unverified URL or a profile for a different person of the same name.
+// ---------------------------------------------------------------------------
+export const clinicExtras: {
+  openingHours: { days: string[]; opens: string; closes: string }[];
+  geo: { latitude: number; longitude: number } | null;
+  sameAs: string[];
+} = {
+  openingHours: [],
+  geo: null,
+  sameAs: [],
+};
+
 // Qualifications relevant to Amanda's current focus. Skin-cancer and cosmetic
 // certificates are intentionally omitted from the new positioning.
 export const qualifications = [
