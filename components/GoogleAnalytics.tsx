@@ -19,7 +19,14 @@ export function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_ID}');
+          // Privacy-conscious for a health site: turn off Google's advertising
+          // features so page browsing here is never used for ad targeting, and
+          // request restricted data processing. See /privacy.
+          gtag('config', '${GA_ID}', {
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+          });
+          gtag('set', { restricted_data_processing: true });
         `}
       </Script>
     </>

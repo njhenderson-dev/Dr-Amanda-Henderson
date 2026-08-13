@@ -45,6 +45,11 @@ export function Footer() {
                 Editorial policy
               </Link>
             </li>
+            <li>
+              <Link href="/privacy" className="text-muted hover:text-ink">
+                Privacy
+              </Link>
+            </li>
           </ul>
         </nav>
 

@@ -111,6 +111,11 @@ export default function EditorialPolicyPage() {
             <Link href="/contact">contact page</Link> and we&rsquo;ll review it
             and update the content where needed.
           </p>
+
+          <p>
+            For how your information is handled on this website, see our{" "}
+            <Link href="/privacy">privacy page</Link>.
+          </p>
         </div>
       </article>
     </>

@@ -1,4 +1,4 @@
-import { site, practice, serviceAreas, nearbyAreas } from "./site";
+import { site, practice, serviceAreas, nearbyAreas, clinicExtras } from "./site";
 
 // ---------------------------------------------------------------------------
 // Structured-data (schema.org JSON-LD) entity graph.
@@ -146,6 +146,13 @@ export function physicianSchema() {
 
 // ── MedicalClinic: the location (GP Maroubra) ──────────────────────────────
 export function clinicSchema() {
+  // Verified local signals — omitted entirely when not yet supplied.
+  const openingHoursSpecification = clinicExtras.openingHours.map((o) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: o.days,
+    opens: o.opens,
+    closes: o.closes,
+  }));
   return {
     "@type": "MedicalClinic",
     "@id": IDS.clinic,
@@ -157,6 +164,17 @@ export function clinicSchema() {
     areaServed,
     medicalSpecialty: "PrimaryCare",
     availableService: availableServices,
+    ...(openingHoursSpecification.length ? { openingHoursSpecification } : {}),
+    ...(clinicExtras.geo
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: clinicExtras.geo.latitude,
+            longitude: clinicExtras.geo.longitude,
+          },
+        }
+      : {}),
+    ...(clinicExtras.sameAs.length ? { sameAs: clinicExtras.sameAs } : {}),
     employee: { "@id": IDS.person },
   };
 }
