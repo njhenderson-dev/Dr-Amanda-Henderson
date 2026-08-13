@@ -103,7 +103,11 @@ Content is separated from presentation — change facts in **one place**:
 | llms.txt / llms-full.txt | `app/llms.txt/route.ts`, `app/llms-full.txt/route.ts` (auto-generate from `lib/site.ts` + articles) |
 | Articles themselves | `content/articles/*.mdx` (frontmatter: title, description, category, dates) |
 
-**Validation before publishing schema changes:** run the site (`npm run build`
-then `npm start`) and paste key URLs into Google's Rich Results Test and the
-Schema.org validator. Confirm every `@id` reference resolves and there are no
-duplicate/conflicting entities.
+**Automated validation:** `npm run check:seo` (or `npm run verify` to build +
+check) parses the JSON-LD in every prerendered page and **fails the build** on
+malformed JSON, unresolved `@id` references, conflicting duplicate `@id`s,
+missing core entities, an Article whose author isn't the Person, or metadata
+problems (missing/duplicate title, missing description, ≠1 `<h1>`, wrong/absent
+canonical, missing `og:title`/`og:image`, missing `lang="en-AU"`). Run it in CI
+or before every deploy. For a final human check, also paste key URLs into
+Google's Rich Results Test / the Schema.org validator.
