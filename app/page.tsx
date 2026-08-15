@@ -58,19 +58,18 @@ export default function HomePage() {
         <div className="container-page grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="animate-fade-up">
             <p className="eyebrow">Female GP · Maroubra, Sydney</p>
-            <h1 className="mt-4 font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              A GP who takes
-              <br className="hidden sm:block" /> the time to listen.
+            <h1 className="mt-3 font-serif text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl">
+              Dr Amanda Henderson
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
-              Hi, I&rsquo;m Dr Amanda Henderson, a family GP in Maroubra. I take
-              the time to understand what&rsquo;s going on, talk through your
-              concerns properly, and help you make sense of what comes next.
+              Hi, I&rsquo;m Amanda, a family GP in Maroubra. I take the time to
+              understand what&rsquo;s going on, talk through your concerns
+              properly, and help you make sense of what comes next.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <BookButton />
               <Link href="/about" className="btn-secondary">
-                Meet Dr Amanda
+                About Dr Amanda
               </Link>
             </div>
             <p className="mt-6 text-sm text-muted">
